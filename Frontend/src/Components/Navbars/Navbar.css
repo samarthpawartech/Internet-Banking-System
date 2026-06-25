@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= TOP HEADER ================= */
+
+.top-header {
+  height: 90px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 50px;
+}
+
+.logo-section {
+  margin-right: 25px;
+}
+
+.logo {
+  width: 180px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.top-menu {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-tab {
+  min-width: 130px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  background: #f1f3f8;
+  color: #4e72eb;
+
+  border: 1px solid #6e9af2;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-tab:hover {
+  background: #0037ff;
+  color: white;
+}
+
+.complaint-tab {
+  min-width: 190px;
+}
+
+.bell-tab {
+  min-width: 50px;
+}
+
+.login-btn {
+  height: 45px;
+  padding: 0 25px;
+
+  background: #e11b22;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* ================= BOTTOM NAVBAR ================= */
+
+.navbar {
+  height: 70px;
+  background: #0037ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 50px;
+}
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-tab {
+  min-width: 130px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-tab:hover {
+  background: white;
+  color: #0037ff;
+}
