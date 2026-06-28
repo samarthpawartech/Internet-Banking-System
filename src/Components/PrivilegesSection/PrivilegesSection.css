@@ -1,0 +1,75 @@
+.privileges-section {
+  width: 100%;
+  background: #eef2f5;
+  padding: 20px 0 40px;
+}
+
+.privileges-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.privileges-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+.privileges-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.privilege-card {
+  width: 320px;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ✅ HOVER EFFECT */
+.privilege-card:hover {
+  background: #0a33d9;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(10, 51, 217, 0.25);
+}
+
+/* text color change on hover */
+.privilege-card:hover h3,
+.privilege-card:hover p {
+  color: #fff;
+}
+
+.privilege-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.privilege-card p {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  line-height: 24px;
+  min-height: 55px;
+}
+
+.privilege-card img {
+  width: 170px;
+  margin-top: auto;
+  object-fit: contain;
+}

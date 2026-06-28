@@ -1,0 +1,42 @@
+.stats-section {
+  width: 100%;
+  background: #eef2f5;
+  padding: 30px 0 50px;
+}
+
+.stats-container {
+  width: 1100px;
+  height: 150px;
+  margin: auto;
+
+  background: #0f31ea;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+.stat-box h1 {
+  font-size: 58px;
+  font-weight: 300;
+}
+
+.stat-box p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,84 @@
+.business-section {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 10px 0 40px;
+}
+
+.business-container {
+  width: 1500px;
+  height: 360px;
+  margin: auto;
+
+  background: linear-gradient(135deg, #d8dbef, #cfd2ec);
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.business-left {
+  width: 45%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.business-left img {
+  height: 340px;
+  object-fit: contain;
+}
+
+.business-right {
+  width: 55%;
+  padding-right: 70px;
+}
+
+.small-text {
+  color: #2f61d5;
+  font-size: 16px;
+}
+
+.business-right h2 {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #222;
+  line-height: 1.25;
+}
+
+.business-right p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.business-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.apply-btn {
+  width: 140px;
+  height: 48px;
+  border: none;
+  border-radius: 30px;
+  background: #ea1d2c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.know-btn {
+  width: 140px;
+  height: 48px;
+  border-radius: 30px;
+  border: 1px solid #ea1d2c;
+  background: transparent;
+  color: #ea1d2c;
+  font-size: 16px;
+  cursor: pointer;
+}
