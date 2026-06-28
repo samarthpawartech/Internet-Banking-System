@@ -1,6 +1,8 @@
-import Navbar from "./components/Navbars/Navbar";
-import HeroSlider from "./components/HeroSlider/HeroSlider";
-import ProductsSection from "./components/ProductsSection/ProductsSection";
+import Navbar from "./Components/Navbars/Navbar";
+import HeroSlider from "./Components/HeroSlider/HeroSlider";
+import ProductsSection from "./Components/ProductsSection/ProductsSection";
+import LoanTools from "./Components/LoanTools/LoanTools";
+import BankingHero from "./Components/BankingHero/BankingHero";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Navbar />
       <HeroSlider />
       <ProductsSection />
+      <LoanTools />
+      <BankingHero />
     </>
   );
 }
