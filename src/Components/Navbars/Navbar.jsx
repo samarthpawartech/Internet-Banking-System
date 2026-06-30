@@ -1,64 +1,103 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { FaBell, FaQuestionCircle, FaChevronDown } from "react-icons/fa";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   const [active, setActive] = useState("PERSONAL");
+
+  const subMenus = {
+    PERSONAL: [
+      "Accounts",
+      "Loans",
+      "Cards",
+      "Payments",
+      "Invest & Insure",
+      "NRI",
+      "Rewards & Offers",
+      "More",
+    ],
+
+    CORPORATE: [
+      " Accounts ",
+      " Cards",
+      "Loans",
+      "Cash Management",
+      "Trade Finance",
+      "Value Added",
+      "Business Segments",
+      "IBS Premium",
+      "IBS First",
+    ],
+
+    DIGITAL: [
+      "Internet Banking",
+      "Mobile Banking",
+      "UPI",
+      "Digital Payments",
+      "API Banking",
+      "Security",
+      "More",
+    ],
+
+    BUSINESS: [
+      "Business Accounts",
+      "Working Capital",
+      "Business Loans",
+      "POS Machine",
+      "Merchant Services",
+      "Collections",
+      "More",
+    ],
+
+    "AGRI & MICRO": [
+      "Agri Loans",
+      "KCC",
+      "Micro Finance",
+      "Rural Banking",
+      "Government Schemes",
+      "Insurance",
+      "More",
+    ],
+  };
+
+  const handleMenuClick = (item) => {
+    setActive(item);
+
+    if (item === "CORPORATE") {
+      navigate("/Corporate-Banking");
+    } else if (item === "PERSONAL") {
+      navigate("/");
+    }
+  };
 
   return (
     <>
-      {/* Top Header */}
+      {/* ================= TOP HEADER ================= */}
+
       <header className="top-header">
-        {/* Logo */}
         <div className="logo-section">
           <img src={logo} alt="logo" className="logo" />
         </div>
 
-        {/* Top Menu */}
         <div className="top-menu">
-          <span
-            className={`menu-tab ${active === "PERSONAL" ? "active" : ""}`}
-            onClick={() => setActive("PERSONAL")}
-          >
-            PERSONAL
-          </span>
+          {Object.keys(subMenus).map((item, index) => (
+            <div key={item} className="menu-wrapper">
+              <span
+                className={`menu-tab ${active === item ? "active" : ""}`}
+                onClick={() => handleMenuClick(item)}
+              >
+                {item}
+              </span>
 
-          <span className="divider"></span>
-
-          <span
-            className={`menu-tab ${active === "CORPORATE" ? "active" : ""}`}
-            onClick={() => setActive("CORPORATE")}
-          >
-            CORPORATE
-          </span>
-
-          <span className="divider"></span>
-
-          <span
-            className={`menu-tab ${active === "DIGITAL" ? "active" : ""}`}
-            onClick={() => setActive("DIGITAL")}
-          >
-            DIGITAL
-          </span>
-
-          <span className="divider"></span>
-
-          <span
-            className={`menu-tab ${active === "BUSINESS" ? "active" : ""}`}
-            onClick={() => setActive("BUSINESS")}
-          >
-            BUSINESS
-          </span>
-
-          <span className="divider"></span>
-
-          <span
-            className={`menu-tab ${active === "AGRI & MICRO" ? "active" : ""}`}
-            onClick={() => setActive("AGRI & MICRO")}
-          >
-            AGRI & MICRO
-          </span>
+              {index !== Object.keys(subMenus).length - 1 && (
+                <span className="divider"></span>
+              )}
+            </div>
+          ))}
 
           <span className="menu-tab complaint-tab">
             <FaQuestionCircle />
@@ -75,17 +114,15 @@ function Navbar() {
         </div>
       </header>
 
-      {/* Bottom Navbar */}
+      {/* ================= SECOND NAVBAR ================= */}
+
       <nav className="navbar">
         <ul className="nav-links">
-          <li className="nav-tab">Accounts</li>
-          <li className="nav-tab">Loans</li>
-          <li className="nav-tab">Cards</li>
-          <li className="nav-tab">Payments</li>
-          <li className="nav-tab">Invest & Insure</li>
-          <li className="nav-tab">NRI</li>
-          <li className="nav-tab">Rewards & Offers</li>
-          <li className="nav-tab">More</li>
+          {subMenus[active].map((item, index) => (
+            <li key={index} className="nav-tab">
+              {item}
+            </li>
+          ))}
         </ul>
       </nav>
     </>

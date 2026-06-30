@@ -1,0 +1,132 @@
+/* ==========================================
+   Corporate Banking Page
+   ========================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.corporateBanking {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Sections */
+
+.corporateBanking section {
+  width: 100%;
+  position: relative;
+}
+
+/* Common Container */
+
+.corporate-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Images */
+
+.corporateBanking img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Links */
+
+.corporateBanking a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+
+.corporateBanking ul,
+.corporateBanking ol {
+  list-style: none;
+}
+
+/* Buttons */
+
+.corporateBanking button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Inputs */
+
+.corporateBanking input,
+.corporateBanking textarea,
+.corporateBanking select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Headings */
+
+.corporateBanking h1,
+.corporateBanking h2,
+.corporateBanking h3,
+.corporateBanking h4,
+.corporateBanking h5,
+.corporateBanking h6 {
+  font-weight: 600;
+}
+
+/* Paragraph */
+
+.corporateBanking p {
+  line-height: 1.6;
+}
+
+/* Smooth Scroll */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+
+::selection {
+  background: #0a33d9;
+  color: #ffffff;
+}
+
+/* ==========================================
+   Responsive
+   ========================================== */
+
+@media (max-width: 1200px) {
+  .corporate-container {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .corporate-container {
+    padding: 0 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .corporate-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .corporate-container {
+    padding: 0 15px;
+  }
+}

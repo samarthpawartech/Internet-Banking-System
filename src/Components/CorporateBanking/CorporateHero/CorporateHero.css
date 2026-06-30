@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HERO SECTION ================= */
+
+.corporateHero {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background: #dfefff;
+}
+
+.heroSlide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.heroSlide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+/* ================= CONTENT ================= */
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* moved more to left */
+  padding-left: 90px;
+
+  /* move slightly upward */
+  transform: translateY(-25px);
+}
+
+.heroContent h1 {
+  width: 430px;
+  color: #2453a6;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  width: 420px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+/* ================= WHITE TEXT FOR FIRST BANNER ================= */
+
+.heroContent.whiteText h1,
+.heroContent.whiteText p {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= BUTTONS ================= */
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroButtons a {
+  text-decoration: none;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  width: 150px;
+  height: 52px;
+  border-radius: 35px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background: #e41f26;
+  color: white;
+  border: none;
+}
+
+.primaryBtn:hover {
+  background: #c8171e;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #e41f26;
+  border: 2px solid #e41f26;
+}
+
+.secondaryBtn:hover {
+  background: #e41f26;
+  color: white;
+}
+
+/* White border button for dark banner */
+
+.heroContent.whiteText .secondaryBtn {
+  color: white;
+  border: 2px solid white;
+}
+
+.heroContent.whiteText .secondaryBtn:hover {
+  background: white;
+  color: #e41f26;
+}
+
+/* ================= DOTS ================= */
+
+.heroDots {
+  position: absolute;
+  left: 120px;
+  bottom: 24px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #2d5ab9;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  width: 36px;
+  border-radius: 20px;
+  background: #2d5ab9;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .corporateHero {
+    height: 430px;
+  }
+
+  .heroContent {
+    padding-left: 60px;
+  }
+
+  .heroContent h1 {
+    width: 350px;
+    font-size: 30px;
+  }
+
+  .heroContent p {
+    width: 320px;
+    font-size: 17px;
+  }
+
+  .heroDots {
+    left: 60px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .corporateHero {
+    height: 380px;
+  }
+
+  .heroContent {
+    padding: 25px;
+    transform: none;
+  }
+
+  .heroContent h1 {
+    width: 250px;
+    font-size: 24px;
+  }
+
+  .heroContent p {
+    width: 240px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 140px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .heroDots {
+    left: 25px;
+    bottom: 18px;
+  }
+}

@@ -46,22 +46,22 @@
   position: relative;
   z-index: 2;
   width: 40%;
-  margin-left: 40px; /* Reduced from 120px */
+  margin-left: 40px;
 }
 
 .slide-content h1 {
-  font-size: 56px;
+  font-size: 40px; /* reduced */
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #0a29d4;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .slide-content p {
-  font-size: 18px;
+  font-size: 14px; /* reduced */
   color: #555;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  line-height: 1.6;
+  margin-bottom: 22px;
 }
 
 /* Buttons */
@@ -74,9 +74,9 @@
   background: #e31837;
   color: white;
   border: none;
-  padding: 15px 40px;
+  padding: 14px 36px;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -89,9 +89,9 @@
   background: transparent;
   color: #0a29d4;
   border: 2px solid #0a29d4;
-  padding: 15px 40px;
+  padding: 14px 36px;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -112,8 +112,8 @@
 }
 
 .hero-swiper .swiper-pagination-bullet {
-  width: 12px !important;
-  height: 12px !important;
+  width: 10px !important;
+  height: 10px !important;
   background: #ffffff !important;
   border: 2px solid #0a29d4 !important;
   opacity: 1 !important;
@@ -121,7 +121,7 @@
 }
 
 .hero-swiper .swiper-pagination-bullet-active {
-  width: 28px !important;
+  width: 24px !important;
   border-radius: 20px !important;
   background: #0a29d4 !important;
 }
@@ -134,7 +134,11 @@
   }
 
   .slide-content h1 {
-    font-size: 42px;
+    font-size: 32px;
+  }
+
+  .slide-content p {
+    font-size: 13px;
   }
 }
 
@@ -155,11 +159,11 @@
   }
 
   .slide-content h1 {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .slide-content p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .banner-buttons {

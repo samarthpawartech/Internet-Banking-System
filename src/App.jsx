@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbars/Navbar";
 import HeroSlider from "./Components/HeroSlider/HeroSlider";
 import ProductsSection from "./Components/ProductsSection/ProductsSection";
@@ -9,10 +11,11 @@ import BusinessBanner from "./Components/BusinessBanner/BusinessBanner";
 import CyberBanner from "./Components/CyberBanner/CyberBanner";
 import Footer from "./Components/Footer/Footer";
 
-function App() {
+import CorporateBanking from "./Components/CorporateBanking/CorporateBanking";
+
+function Home() {
   return (
     <>
-      <Navbar />
       <HeroSlider />
       <ProductsSection />
       <LoanTools />
@@ -21,8 +24,23 @@ function App() {
       <StatsSection />
       <BusinessBanner />
       <CyberBanner />
-      <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/Corporate-Banking" element={<CorporateBanking />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
 
