@@ -1,8 +1,11 @@
+import { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { FaBell, FaQuestionCircle, FaChevronDown } from "react-icons/fa";
 
 function Navbar() {
+  const [active, setActive] = useState("PERSONAL");
+
   return (
     <>
       {/* Top Header */}
@@ -14,11 +17,48 @@ function Navbar() {
 
         {/* Top Menu */}
         <div className="top-menu">
-          <span className="menu-tab">PERSONAL</span>
-          <span className="menu-tab">CORPORATE</span>
-          <span className="menu-tab">DIGITAL</span>
-          <span className="menu-tab">BUSINESS</span>
-          <span className="menu-tab">AGRI & MICRO</span>
+          <span
+            className={`menu-tab ${active === "PERSONAL" ? "active" : ""}`}
+            onClick={() => setActive("PERSONAL")}
+          >
+            PERSONAL
+          </span>
+
+          <span className="divider"></span>
+
+          <span
+            className={`menu-tab ${active === "CORPORATE" ? "active" : ""}`}
+            onClick={() => setActive("CORPORATE")}
+          >
+            CORPORATE
+          </span>
+
+          <span className="divider"></span>
+
+          <span
+            className={`menu-tab ${active === "DIGITAL" ? "active" : ""}`}
+            onClick={() => setActive("DIGITAL")}
+          >
+            DIGITAL
+          </span>
+
+          <span className="divider"></span>
+
+          <span
+            className={`menu-tab ${active === "BUSINESS" ? "active" : ""}`}
+            onClick={() => setActive("BUSINESS")}
+          >
+            BUSINESS
+          </span>
+
+          <span className="divider"></span>
+
+          <span
+            className={`menu-tab ${active === "AGRI & MICRO" ? "active" : ""}`}
+            onClick={() => setActive("AGRI & MICRO")}
+          >
+            AGRI & MICRO
+          </span>
 
           <span className="menu-tab complaint-tab">
             <FaQuestionCircle />
