@@ -15,7 +15,7 @@
   color: #fff;
   overflow: hidden;
   margin-top: -15px;
-  margin-bottom: 0; /* removed bottom gap */
+  margin-bottom: 45px;
 }
 
 /* LEFT */
@@ -179,7 +179,7 @@
     height: auto;
     padding: 40px 20px;
     text-align: center;
-    margin-bottom: 5px; /* removed gap here too */
+    margin-bottom: 30px;
   }
 
   .left,
