@@ -42,7 +42,7 @@ export default function DashboardPage() {
                 <TrendingUp className="size-4" /> +4.2% this month
               </p>
             </div>
-            <div className="w-full max-w-[280px]">
+            <div className="w-full max-w-70">
               <Sparkline data={balanceHistory} />
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function DashboardPage() {
                   <span className="flex size-11 items-center justify-center rounded-full border border-cyan/30 bg-cyan/5 text-sm font-semibold text-cyan">
                     {b.initials}
                   </span>
-                  <span className="max-w-[52px] truncate text-[10px] text-muted-foreground">
+                  <span className="max-w-13 truncate text-[10px] text-muted-foreground">
                     {b.name.split(' ')[0]}
                   </span>
                 </Link>)}

@@ -23,7 +23,7 @@ export function Hero() {
   return <section className="relative overflow-hidden">
       <div className="hero-mesh absolute inset-0" />
       <div className="neon-grid absolute inset-0 opacity-60" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-b from-transparent to-background" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
         <div className="flex flex-col justify-center">
