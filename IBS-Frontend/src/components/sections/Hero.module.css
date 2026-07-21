@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--header-height);
+  overflow: hidden;
+}
+
+.meshGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--x, 70%) var(--y, 30%), rgba(0, 245, 255, 0.14), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 40px;
+  padding-block: 40px 60px;
+}
+
+.swiper { min-height: 300px; }
+.swiper :global(.swiper-slide) { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+
+.title {
+  font-size: clamp(2.4rem, 5vw, 3.9rem);
+  color: var(--color-text);
+  max-width: 620px;
+}
+
+.desc { font-size: 17.5px; max-width: 480px; color: var(--color-text-secondary); }
+
+.ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.trustRow { display: flex; gap: 26px; flex-wrap: wrap; margin-top: 44px; }
+.trustRow span { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--color-muted); }
+.trustRow svg { color: var(--color-accent); }
+
+.cardStage { position: relative; height: 420px; }
+.floatCard {
+  position: absolute;
+  width: 232px;
+  height: 148px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  animation: floatY 6.5s ease-in-out infinite;
+  backdrop-filter: blur(6px);
+}
+.floatCard::after {
+  content: '';
+  position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.16) 50%, transparent 70%);
+}
+.cardSavings { background: var(--gradient-primary); top: 10%; left: 0; z-index: 1; animation-delay: 0s; }
+.cardCredit { background: var(--gradient-purple); top: 32%; left: 26%; z-index: 3; animation-delay: 0.6s; box-shadow: var(--shadow-glow-purple), 0 30px 60px rgba(0,0,0,0.5); }
+.cardBiz { background: var(--gradient-gold); color: #241200; top: 56%; left: 8%; z-index: 2; animation-delay: 1.2s; }
+.chip { width: 26px; height: 18px; border-radius: 4px; background: rgba(255, 255, 255, 0.85); }
+.cardTop { display: flex; align-items: center; justify-content: space-between; }
+.cardNum { font-size: 13px; letter-spacing: 0.05em; opacity: 0.92; }
+.cardLabel { font-size: 13.5px; font-weight: 600; }
+
+.marqueeWrap {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+  overflow: hidden;
+  padding-block: 16px;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marqueeTrack { display: flex; gap: 14px; width: max-content; animation: marquee 32s linear infinite; }
+.offerChip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.035); border: 1px solid var(--border-glass);
+  font-size: 13px; color: var(--color-text-secondary); white-space: nowrap;
+}
+.offerChip svg { color: var(--color-success); }
+
+@media (max-width: 980px) {
+  .grid { grid-template-columns: 1fr; }
+  .cardStage { height: 300px; order: -1; transform: scale(0.85); }
+}
+@media (max-width: 560px) {
+  .cardStage { height: 260px; transform: scale(0.72); margin-inline: -20px; }
+  .ctas { width: 100%; }
+  .ctas > a, .ctas > button { flex: 1; justify-content: center; }
+}

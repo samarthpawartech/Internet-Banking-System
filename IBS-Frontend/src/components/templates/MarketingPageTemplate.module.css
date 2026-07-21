@@ -1,0 +1,26 @@
+.hero { position: relative; padding-top: calc(var(--header-height) + 56px); padding-bottom: 64px; overflow: hidden; }
+.heroInner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; max-width: 760px; }
+.heroIcon { width: 56px; height: 56px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: #041022; margin-bottom: 18px; box-shadow: var(--shadow-glow-accent); }
+.title { font-size: clamp(2.1rem, 4.2vw, 3.2rem); margin: 14px 0 16px; color: var(--color-text); }
+.desc { font-size: 16.5px; color: var(--color-text-secondary); max-width: 620px; }
+.ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+
+.overviewGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: start; }
+.overviewTitle { font-size: clamp(1.6rem, 2.8vw, 2.1rem); margin-bottom: 18px; }
+.overviewText { font-size: 15.5px; margin-bottom: 14px; }
+.highlightCol { display: flex; flex-direction: column; gap: 16px; }
+.highlightItem { display: flex; gap: 14px; align-items: center; padding: 18px; border-radius: var(--radius-md); background: var(--color-card-soft); border: 1px solid var(--border-glass); }
+.highlightItem svg { color: var(--color-accent); flex-shrink: 0; }
+.highlightItem strong { display: block; font-size: 17px; color: var(--color-text); font-family: var(--font-mono); }
+.highlightItem span { display: block; font-size: 12.5px; color: var(--color-muted); margin-top: 2px; }
+
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.relatedRow { display: flex; flex-wrap: wrap; gap: 14px; }
+.relatedItem { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: var(--radius-full); border: 1px solid var(--border-glass); background: var(--color-card-soft); font-size: 14px; color: var(--color-text-secondary); transition: all var(--transition-fast); }
+.relatedItem:hover { border-color: var(--color-accent); color: var(--color-text); }
+.relatedItem svg:first-child { color: var(--color-accent); }
+.relatedArrow { color: var(--color-muted); }
+
+@media (max-width: 980px) { .overviewGrid { grid-template-columns: 1fr; gap: 32px; } .grid4 { grid-template-columns: repeat(2, 1fr); } .grid3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid4, .grid3 { grid-template-columns: 1fr; } }

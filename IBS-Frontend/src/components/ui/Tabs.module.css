@@ -1,0 +1,5 @@
+.wrap { display: inline-flex; padding: 5px; gap: 4px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-full); }
+.tab { position: relative; padding: 10px 22px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--color-muted); border-radius: var(--radius-full); transition: color var(--transition-fast); }
+.tab.active { color: #041022; }
+.indicator { position: absolute; inset: 0; border-radius: inherit; background: var(--gradient-primary); z-index: -1; }
+.label { position: relative; z-index: 1; }

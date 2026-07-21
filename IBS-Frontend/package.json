@@ -1,0 +1,28 @@
+{
+  "name": "ibs-banking",
+  "version": "1.0.0",
+  "description": "IBS - Internet Banking System. Developed by Samarth Pawar.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Samarth Pawar",
+  "license": "ISC",
+  "dependencies": {
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^1.25.0",
+    "react": "^19.2.7",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.2.7",
+    "react-intersection-observer": "^10.1.0",
+    "react-router-dom": "^7.18.1",
+    "swiper": "^14.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.5"
+  }
+}

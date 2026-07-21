@@ -1,0 +1,86 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  white-space: nowrap;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  isolation: isolate;
+}
+
+.btn:active { transform: scale(0.97); }
+
+/* sizes */
+.sm { padding: 9px 18px; font-size: 13.5px; }
+.md { padding: 13px 26px; font-size: 15px; }
+.lg { padding: 17px 34px; font-size: 16.5px; }
+
+/* variants */
+.primary {
+  color: #041022;
+  background: var(--gradient-primary);
+  background-size: 160% 160%;
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.28);
+}
+.primary:hover {
+  background-position: 100% 0;
+  box-shadow: var(--shadow-glow-accent), 0 12px 30px rgba(13, 110, 253, 0.35);
+  transform: translateY(-2px);
+}
+
+.secondary {
+  color: var(--color-text);
+  background: var(--gradient-purple);
+  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.25);
+}
+.secondary:hover {
+  box-shadow: var(--shadow-glow-purple), 0 12px 30px rgba(138, 43, 226, 0.32);
+  transform: translateY(-2px);
+}
+
+.outline {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass-strong);
+  backdrop-filter: blur(10px);
+}
+.outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 0 1px rgba(0, 245, 255, 0.3) inset;
+  transform: translateY(-2px);
+}
+
+.ghost {
+  color: var(--color-text-secondary);
+  background: transparent;
+  padding-inline: 6px;
+}
+.ghost:hover { color: var(--color-accent); }
+
+.disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+
+.rippleLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.65s var(--ease-out);
+  pointer-events: none;
+}

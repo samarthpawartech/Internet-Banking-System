@@ -1,0 +1,39 @@
+.card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.pad-sm { padding: 20px; }
+.pad-md { padding: 28px; }
+.pad-lg { padding: 40px; }
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.55), rgba(138, 43, 226, 0.5) 55%, transparent 80%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.hoverable:hover {
+  transform: translateY(-8px);
+  border-color: transparent;
+}
+.hoverable:hover::before { opacity: 1; }
+
+.glow-accent.hoverable:hover { box-shadow: var(--shadow-glow-accent), var(--shadow-card); }
+.glow-purple.hoverable:hover { box-shadow: var(--shadow-glow-purple), var(--shadow-card); }
+.glow-success.hoverable:hover { box-shadow: var(--shadow-glow-success), var(--shadow-card); }
+.glow-none.hoverable:hover { box-shadow: var(--shadow-card); }

@@ -1,0 +1,10 @@
+.wrap { display: flex; flex-direction: column; gap: 16px; margin-bottom: 52px; }
+.center { align-items: center; text-align: center; }
+.left { align-items: flex-start; text-align: left; }
+
+.title { color: var(--color-text); max-width: 720px; }
+.size-md { font-size: clamp(1.9rem, 3.4vw, 2.75rem); }
+.size-lg { font-size: clamp(2.3rem, 4.6vw, 3.6rem); }
+
+.desc { max-width: 620px; font-size: 17px; color: var(--color-muted); }
+.center .desc { margin-inline: auto; }

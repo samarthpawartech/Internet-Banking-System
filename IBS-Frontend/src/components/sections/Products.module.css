@@ -1,0 +1,5 @@
+.bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 22px; }
+.spanLg { grid-column: span 2; grid-row: span 2; }
+.spanMd { grid-column: span 2; }
+@media (max-width: 980px) { .bento { grid-template-columns: repeat(2, 1fr); } .spanLg { grid-column: span 2; grid-row: span 1; } }
+@media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .spanLg, .spanMd { grid-column: span 1; } }

@@ -1,0 +1,5 @@
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.awards { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 40px; }
+.award { display: flex; align-items: center; gap: 9px; padding: 10px 18px; border-radius: var(--radius-full); border: 1px solid var(--border-glass); font-size: 13px; color: var(--color-muted); }
+.award svg { color: var(--color-warning); }
+@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }

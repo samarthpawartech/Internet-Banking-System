@@ -1,0 +1,14 @@
+.card { display: flex; flex-direction: column; gap: 12px; height: 100%; }
+.iconWrap { width: 50px; height: 50px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; background: rgba(0,245,255,0.08); border: 1px solid rgba(0,245,255,0.25); color: var(--color-accent); }
+.mockCard { position: relative; height: 84px; border-radius: 14px; padding: 14px 16px; background: var(--gradient-purple); display: flex; flex-direction: column; justify-content: space-between; color: #fff; overflow: hidden; }
+.mockCard::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%); }
+.chip { width: 26px; height: 18px; border-radius: 4px; background: rgba(255,255,255,0.85); }
+.mockIcon { position: absolute; top: 14px; right: 16px; opacity: 0.9; }
+.mockDots { font-size: 12px; letter-spacing: 0.06em; opacity: 0.9; }
+.badge { align-self: flex-start; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: var(--radius-full); background: rgba(0,255,149,0.12); color: var(--color-success); border: 1px solid rgba(0,255,149,0.3); }
+.title { font-size: 18px; }
+.desc { font-size: 14px; margin: 0; }
+.features { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.features li { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--color-text-secondary); }
+.features li svg { color: var(--color-success); flex-shrink: 0; }
+.cta { margin-top: auto; align-self: flex-start; }

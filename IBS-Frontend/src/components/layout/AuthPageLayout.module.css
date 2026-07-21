@@ -1,0 +1,7 @@
+.wrap { min-height: 100vh; display: flex; flex-direction: column; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 24px clamp(20px, 5vw, 56px); }
+.logo { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 20px; }
+.logoMark { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: #041022; }
+.help { display: flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--color-muted); }
+.help:hover { color: var(--color-accent); }
+.main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }

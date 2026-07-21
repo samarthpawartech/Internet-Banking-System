@@ -1,0 +1,69 @@
+:root {
+  /* ---- Brand colors (fixed per brief) ---- */
+  --color-primary: #001B44;
+  --color-secondary: #0D6EFD;
+  --color-accent: #00F5FF;
+  --color-purple: #8A2BE2;
+  --color-success: #00FF95;
+  --color-danger: #FF4D6D;
+  --color-warning: #FFB800;
+
+  --color-bg: #050816;
+  --color-bg-soft: #080D24;
+  --color-bg-elevated: #0A0F2A;
+  --color-card: #0B1120;
+  --color-card-soft: rgba(255, 255, 255, 0.035);
+
+  --color-text: #FFFFFF;
+  --color-text-secondary: #C9CEDD;
+  --color-muted: #9CA3AF;
+
+  --border-glass: rgba(255, 255, 255, 0.09);
+  --border-glass-strong: rgba(255, 255, 255, 0.16);
+
+  /* ---- Gradients ---- */
+  --gradient-primary: linear-gradient(135deg, #0D6EFD 0%, #00C6FF 55%, #00F5FF 100%);
+  --gradient-purple: linear-gradient(135deg, #8A2BE2 0%, #4B5EE4 55%, #0D6EFD 100%);
+  --gradient-success: linear-gradient(135deg, #00FF95 0%, #0D6EFD 100%);
+  --gradient-gold: linear-gradient(135deg, #FFB800 0%, #FF7A5C 100%);
+  --gradient-text: linear-gradient(90deg, #00F5FF 0%, #0D6EFD 55%, #8A2BE2 100%);
+  --gradient-mesh:
+    radial-gradient(at 15% 15%, rgba(13, 110, 253, 0.28) 0, transparent 45%),
+    radial-gradient(at 85% 10%, rgba(138, 43, 226, 0.22) 0, transparent 45%),
+    radial-gradient(at 50% 100%, rgba(0, 245, 255, 0.14) 0, transparent 50%);
+
+  /* ---- Elevation & glow ---- */
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow-accent: 0 0 1px rgba(0, 245, 255, 0.6), 0 0 40px rgba(0, 245, 255, 0.22);
+  --shadow-glow-purple: 0 0 1px rgba(138, 43, 226, 0.6), 0 0 40px rgba(138, 43, 226, 0.24);
+  --shadow-glow-success: 0 0 1px rgba(0, 255, 149, 0.6), 0 0 36px rgba(0, 255, 149, 0.2);
+
+  /* ---- Radius ---- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 999px;
+
+  /* ---- Type ---- */
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* ---- Layout ---- */
+  --container-width: 1264px;
+  --container-pad: clamp(20px, 5vw, 64px);
+  --header-height: 84px;
+  --section-pad-y: clamp(64px, 9vw, 128px);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-base: 0.4s var(--ease-out);
+  --transition-slow: 0.7s var(--ease-out);
+
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-popup: 300;
+}

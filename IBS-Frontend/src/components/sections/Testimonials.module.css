@@ -1,0 +1,10 @@
+.swiper { padding-bottom: 12px; }
+.card { height: 100%; display: flex; flex-direction: column; gap: 16px; }
+.stars { display: flex; gap: 3px; }
+.starOn { color: var(--color-warning); }
+.starOff { color: var(--border-glass-strong); }
+.quote { font-size: 15px; color: var(--color-text-secondary); flex: 1; }
+.person { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: #041022; font-weight: 700; font-size: 13px; flex-shrink: 0; }
+.person strong { display: block; font-size: 14px; color: var(--color-text); }
+.person span { display: block; font-size: 12.5px; color: var(--color-muted); }

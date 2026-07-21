@@ -1,0 +1,17 @@
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-header); height: var(--header-height); display: flex; align-items: center; transition: background var(--transition-base), border-color var(--transition-base); border-bottom: 1px solid transparent; }
+.transparent { background: transparent; }
+.solid { background: rgba(5, 8, 22, 0.78); backdrop-filter: blur(16px); border-color: var(--border-glass); }
+.inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; }
+.logoMark { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: #041022; box-shadow: var(--shadow-glow-accent); }
+.nav { display: flex; align-items: center; gap: 4px; }
+.navItemWrap { position: relative; }
+.navLink { display: flex; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; color: var(--color-text-secondary); font-size: 14.5px; font-weight: 500; padding: 10px 14px; border-radius: var(--radius-sm); transition: color var(--transition-fast); }
+.navLink:hover { color: var(--color-text); }
+.actions { display: flex; align-items: center; gap: 6px; }
+.iconBtn { position: relative; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); color: var(--color-text-secondary); cursor: pointer; transition: all var(--transition-fast); }
+.iconBtn:hover { color: var(--color-accent); border-color: rgba(0,245,255,0.3); }
+.dot { position: absolute; top: 9px; right: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--color-danger); box-shadow: 0 0 6px var(--color-danger); }
+.loginBtn { margin-left: 8px; }
+.hamburger { display: none; background: none; border: none; color: var(--color-text); cursor: pointer; }
+@media (max-width: 900px) { .nav { display: none; } .loginBtn { display: none; } .hamburger { display: flex; } }

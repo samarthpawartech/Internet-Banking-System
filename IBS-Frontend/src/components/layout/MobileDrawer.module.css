@@ -1,0 +1,15 @@
+.scrim { position: fixed; inset: 0; background: rgba(2,5,15,0.7); z-index: var(--z-overlay); }
+.drawer { position: fixed; top: 0; right: 0; height: 100dvh; width: min(360px, 86vw); background: var(--color-bg-elevated); border-left: 1px solid var(--border-glass-strong); z-index: var(--z-overlay); display: flex; flex-direction: column; overflow-y: auto; }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 22px; border-bottom: 1px solid var(--border-glass); }
+.logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; }
+.closeBtn { background: none; border: none; color: var(--color-text); cursor: pointer; display: flex; }
+.nav { display: flex; flex-direction: column; padding: 10px 12px; gap: 2px; flex: 1; }
+.navItem { display: flex; flex-direction: column; }
+.navHead { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 15px 12px; background: none; border: none; color: var(--color-text); font-size: 15.5px; font-weight: 600; cursor: pointer; text-align: left; }
+.navHead svg { transition: transform var(--transition-fast); }
+.rotated { transform: rotate(180deg); }
+.subLinks { display: flex; flex-direction: column; padding: 0 12px 12px 22px; gap: 2px; }
+.subLink { padding: 10px 12px; font-size: 14px; color: var(--color-muted); border-radius: var(--radius-sm); }
+.subLink:hover { color: var(--color-accent); background: rgba(255,255,255,0.03); }
+.actions { padding: 20px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border-glass); }
+.fullBtn { width: 100%; }

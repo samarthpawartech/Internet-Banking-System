@@ -1,0 +1,5 @@
+.card { text-align: center; }
+.inner { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.icon { color: var(--color-accent); }
+.value { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; color: var(--color-text); }
+.label { font-size: 13.5px; color: var(--color-muted); letter-spacing: 0.02em; }
