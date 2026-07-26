@@ -5,7 +5,7 @@ import styles from './CTA.module.css';
 export default function CTA({
   title = 'Open an IBS account in under 6 minutes',
   description = 'Video-KYC, instant virtual card, zero paperwork.',
-  primaryCta = { label: 'Open an account', path: '/personal-banking/savings-account' },
+  primaryCta = { label: 'Open an account', path: '/open-account?type=savings' },
   secondaryCta = { label: 'Talk to us', path: '/contact' },
 }) {
   return (

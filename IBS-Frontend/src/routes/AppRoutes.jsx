@@ -25,6 +25,7 @@ import InsuranceClaim from '../pages/InsuranceClaim.jsx';
 import ComplaintForm from '../pages/ComplaintForm.jsx';
 import TrackRequest from '../pages/TrackRequest.jsx';
 import IBSConnect from '../pages/IBSConnect.jsx';
+import OpenAccount from '../pages/OpenAccount.jsx';
 import About from '../pages/About.jsx';
 import Careers from '../pages/Careers.jsx';
 import Contact from '../pages/Contact.jsx';
@@ -59,6 +60,7 @@ export default function AppRoutes() {
         <Route path="/complaint" element={<ComplaintForm />} />
         <Route path="/track-request" element={<TrackRequest />} />
         <Route path="/ibs-connect" element={<IBSConnect />} />
+        <Route path="/open-account" element={<OpenAccount />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />

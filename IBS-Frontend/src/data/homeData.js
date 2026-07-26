@@ -4,7 +4,7 @@ export const heroSlides = [
     title: 'Banking that moves at',
     highlight: 'your speed',
     desc: 'Open an account, move money, apply for a card — all from one dark, distraction-free dashboard. No branch visit required.',
-    primaryCta: { label: 'Open an account', path: '/personal-banking/savings-account' },
+    primaryCta: { label: 'Open an account', path: '/open-account?type=savings' },
     secondaryCta: { label: 'Explore products', path: '/personal-banking' },
   },
   {
@@ -38,7 +38,7 @@ export const productsGrid = [
   {
     icon: 'PiggyBank', title: 'Savings Account', desc: 'Zero-balance options with up to 4.5% p.a. and a virtual card in minutes.',
     features: ['Video KYC in 6 minutes', 'Free debit card, first year', 'UPI enabled from day one'],
-    cta: { label: 'Open savings account', path: '/personal-banking/savings-account' }, size: 'lg', variant: 'default',
+    cta: { label: 'Open savings account', path: '/open-account?type=savings' }, size: 'lg', variant: 'default',
   },
   {
     icon: 'CreditCard', title: 'Credit Cards', desc: 'Platinum, Signature and Infinite — pick your reward style.',

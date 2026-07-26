@@ -6,7 +6,7 @@ export const pagesData = {
       icon: 'User', eyebrow: 'Personal Banking',
       title: 'Every account you need, none of the clutter you don\u2019t',
       description: 'Savings, salary, deposits, cards and loans — designed to work together as one connected account, not nine separate logins.',
-      primaryCta: { label: 'Open savings account', path: '/personal-banking/savings-account' },
+      primaryCta: { label: 'Open savings account', path: '/open-account?type=savings' },
       secondaryCta: { label: 'Compare cards', path: '/personal-banking/cards/credit-cards' },
     },
     overview: {
@@ -57,7 +57,7 @@ export const pagesData = {
         { icon: 'Gift', title: 'IBS Rewards', path: '/personal-banking/ibs-rewards' },
       ],
     },
-    cta: { title: 'Ready to make the switch?', description: 'Open a savings account in under 6 minutes.', primaryCta: { label: 'Open account', path: '/personal-banking/savings-account' }, secondaryCta: { label: 'Talk to us', path: '/contact' } },
+    cta: { title: 'Ready to make the switch?', description: 'Open a savings account in under 6 minutes.', primaryCta: { label: 'Open account', path: '/open-account?type=savings' }, secondaryCta: { label: 'Talk to us', path: '/contact' } },
   },
 
   corporateBanking: {
@@ -183,7 +183,7 @@ export const pagesData = {
       icon: 'Store', eyebrow: 'Business Banking',
       title: 'Current accounts and financing built for founders',
       description: 'From your first current account to working capital and payroll, business banking that scales as fast as you do.',
-      primaryCta: { label: 'Open current account', path: '/contact' },
+      primaryCta: { label: 'Open current account', path: '/open-account?type=current' },
       secondaryCta: { label: 'Merchant services', path: '/support' },
     },
     overview: {
@@ -210,7 +210,7 @@ export const pagesData = {
       title: 'Explore business banking products',
       subtitle: 'Pick the module your business needs right now.',
       items: [
-        { icon: 'Building2', title: 'Current Accounts', desc: 'Zero-hassle accounts for every scale.', cta: { label: 'Explore', path: '/contact' } },
+        { icon: 'Building2', title: 'Current Accounts', desc: 'Zero-hassle accounts for every scale.', cta: { label: 'Explore', path: '/open-account?type=current' } },
         { icon: 'Rocket', title: 'MSME & Startup Loans', desc: 'Collateral-free credit up to ₹2 Cr.', cta: { label: 'Explore', path: '/contact' } },
         { icon: 'Store', title: 'Merchant Services & POS', desc: 'Accept payments in-store and online.', cta: { label: 'Explore', path: '/contact' } },
         { icon: 'Wheat', title: 'Agri & Food Business', desc: 'Farm to warehouse financing.', cta: { label: 'Explore', path: '/business-banking/agri-and-food-business' } },
@@ -514,7 +514,7 @@ export const pagesData = {
       icon: 'PiggyBank', eyebrow: 'Savings Account',
       title: 'A savings account that opens in one sitting',
       description: 'Zero-balance options, up to 4.5% p.a. interest, and a virtual debit card the moment your video-KYC finishes.',
-      primaryCta: { label: 'Open account now', path: '/customer-login' },
+      primaryCta: { label: 'Open account now', path: '/open-account?type=savings' },
       secondaryCta: { label: 'Compare tiers below', path: '#' },
     },
     overview: {
@@ -541,9 +541,9 @@ export const pagesData = {
       title: 'Pick your savings tier',
       subtitle: 'All tiers include UPI, a debit card, and IBS Connect access.',
       items: [
-        { icon: 'PiggyBank', badge: '3.5% p.a.', title: 'Regular Savings', desc: 'Zero minimum balance, built for everyday use.', features: ['No minimum balance', 'Free virtual debit card', 'UPI & IBS Connect included'], cta: { label: 'Open now', path: '/customer-login' } },
-        { icon: 'Sparkles', badge: '4.5% p.a.', title: 'Premium Savings', desc: 'Higher interest for maintained balances.', features: ['₹25,000 avg. monthly balance', 'Priority customer support', 'Free international debit card'], cta: { label: 'Open now', path: '/customer-login' } },
-        { icon: 'HeartHandshake', badge: '5% p.a.', title: 'Senior Citizen Savings', desc: 'Preferential rate for customers 60 and above.', features: ['Highest savings rate', 'Doorstep banking requests', 'Dedicated support line'], cta: { label: 'Open now', path: '/customer-login' } },
+        { icon: 'PiggyBank', badge: '3.5% p.a.', title: 'Regular Savings', desc: 'Zero minimum balance, built for everyday use.', features: ['No minimum balance', 'Free virtual debit card', 'UPI & IBS Connect included'], cta: { label: 'Open now', path: '/open-account?type=savings' } },
+        { icon: 'Sparkles', badge: '4.5% p.a.', title: 'Premium Savings', desc: 'Higher interest for maintained balances.', features: ['₹25,000 avg. monthly balance', 'Priority customer support', 'Free international debit card'], cta: { label: 'Open now', path: '/open-account?type=savings' } },
+        { icon: 'HeartHandshake', badge: '5% p.a.', title: 'Senior Citizen Savings', desc: 'Preferential rate for customers 60 and above.', features: ['Highest savings rate', 'Doorstep banking requests', 'Dedicated support line'], cta: { label: 'Open now', path: '/open-account?type=savings' } },
       ],
     },
     faq: {
@@ -563,7 +563,7 @@ export const pagesData = {
         { icon: 'CreditCard', title: 'Credit Cards', path: '/personal-banking/cards/credit-cards' },
       ],
     },
-    cta: { title: 'Open your savings account today', description: 'Video-KYC takes about 6 minutes, start to finish.', primaryCta: { label: 'Get started', path: '/customer-login' }, secondaryCta: { label: 'Talk to us first', path: '/contact' } },
+    cta: { title: 'Open your savings account today', description: 'Video-KYC takes about 6 minutes, start to finish.', primaryCta: { label: 'Get started', path: '/open-account?type=savings' }, secondaryCta: { label: 'Talk to us first', path: '/contact' } },
   },
 
   salaryAccount: {
@@ -574,7 +574,7 @@ export const pagesData = {
       title: 'Zero-fee banking your whole company can switch to',
       description: 'No minimum balance, free debit card, and preferential loan rates the moment your salary starts crediting.',
       primaryCta: { label: 'Get corporate salary tie-up', path: '/contact' },
-      secondaryCta: { label: 'Open individually', path: '/customer-login' },
+      secondaryCta: { label: 'Open individually', path: '/open-account?type=salary' },
     },
     overview: {
       title: 'Built for HR teams and employees alike',
@@ -599,9 +599,9 @@ export const pagesData = {
     cards: {
       title: 'Salary account tiers',
       items: [
-        { icon: 'Wallet', badge: 'Classic', title: 'Classic Salary', desc: 'For salaries up to ₹50,000/month.', features: ['Free debit card', 'Zero balance requirement'], cta: { label: 'Explore', path: '/customer-login' } },
-        { icon: 'Sparkles', badge: 'Premium', title: 'Premium Salary', desc: 'For salaries ₹50,000–₹1.5L/month.', features: ['Free platinum debit card', 'Priority support'], cta: { label: 'Explore', path: '/customer-login' } },
-        { icon: 'Crown', badge: 'Privilege', title: 'Privilege Salary', desc: 'For salaries above ₹1.5L/month.', features: ['Airport lounge access', 'Dedicated relationship desk'], cta: { label: 'Explore', path: '/customer-login' } },
+        { icon: 'Wallet', badge: 'Classic', title: 'Classic Salary', desc: 'For salaries up to ₹50,000/month.', features: ['Free debit card', 'Zero balance requirement'], cta: { label: 'Explore', path: '/open-account?type=salary' } },
+        { icon: 'Sparkles', badge: 'Premium', title: 'Premium Salary', desc: 'For salaries ₹50,000–₹1.5L/month.', features: ['Free platinum debit card', 'Priority support'], cta: { label: 'Explore', path: '/open-account?type=salary' } },
+        { icon: 'Crown', badge: 'Privilege', title: 'Privilege Salary', desc: 'For salaries above ₹1.5L/month.', features: ['Airport lounge access', 'Dedicated relationship desk'], cta: { label: 'Explore', path: '/open-account?type=salary' } },
       ],
     },
     faq: {
@@ -620,7 +620,7 @@ export const pagesData = {
         { icon: 'CreditCard', title: 'Credit Cards', path: '/personal-banking/cards/credit-cards' },
       ],
     },
-    cta: { title: 'Bring your company on board', description: 'Set up a corporate salary tie-up for your whole team.', primaryCta: { label: 'Talk to corporate desk', path: '/contact' }, secondaryCta: { label: 'Open individually', path: '/customer-login' } },
+    cta: { title: 'Bring your company on board', description: 'Set up a corporate salary tie-up for your whole team.', primaryCta: { label: 'Talk to corporate desk', path: '/contact' }, secondaryCta: { label: 'Open individually', path: '/open-account?type=salary' } },
   },
 
   deposits: {
@@ -630,7 +630,7 @@ export const pagesData = {
       icon: 'Landmark', eyebrow: 'Fixed & Recurring Deposits',
       title: 'Lock in a rate before it moves again',
       description: 'Fixed and recurring deposits up to 7.75% p.a., with partial withdrawal so your money is never fully out of reach.',
-      primaryCta: { label: 'Open a deposit', path: '/customer-login' },
+      primaryCta: { label: 'Open a deposit', path: '/open-account?type=deposit' },
       secondaryCta: { label: 'Compare schemes below', path: '#' },
     },
     overview: {
@@ -656,9 +656,9 @@ export const pagesData = {
     cards: {
       title: 'Deposit schemes',
       items: [
-        { icon: 'Landmark', badge: '7.75% p.a.', title: 'Fixed Deposit', desc: 'Lump-sum deposit, 7 days to 10 years.', features: ['Partial withdrawal allowed', 'Loan against FD available'], cta: { label: 'Open FD', path: '/customer-login' } },
-        { icon: 'RefreshCw', badge: '7.25% p.a.', title: 'Recurring Deposit', desc: 'Monthly instalments from ₹500.', features: ['Flexible tenure, 6–120 months', 'Auto-debit from savings'], cta: { label: 'Open RD', path: '/customer-login' } },
-        { icon: 'ShieldCheck', badge: '7.5% p.a.', title: 'Tax-Saver Fixed Deposit', desc: '5-year lock-in, Section 80C eligible.', features: ['Tax deduction up to ₹1.5L', 'No premature withdrawal'], cta: { label: 'Open now', path: '/customer-login' } },
+        { icon: 'Landmark', badge: '7.75% p.a.', title: 'Fixed Deposit', desc: 'Lump-sum deposit, 7 days to 10 years.', features: ['Partial withdrawal allowed', 'Loan against FD available'], cta: { label: 'Open FD', path: '/open-account?type=deposit' } },
+        { icon: 'RefreshCw', badge: '7.25% p.a.', title: 'Recurring Deposit', desc: 'Monthly instalments from ₹500.', features: ['Flexible tenure, 6–120 months', 'Auto-debit from savings'], cta: { label: 'Open RD', path: '/open-account?type=deposit' } },
+        { icon: 'ShieldCheck', badge: '7.5% p.a.', title: 'Tax-Saver Fixed Deposit', desc: '5-year lock-in, Section 80C eligible.', features: ['Tax deduction up to ₹1.5L', 'No premature withdrawal'], cta: { label: 'Open now', path: '/open-account?type=deposit' } },
       ],
     },
     faq: {
@@ -677,7 +677,7 @@ export const pagesData = {
         { icon: 'HandCoins', title: 'Loan Against Deposit', path: '/personal-banking/loans' },
       ],
     },
-    cta: { title: 'Lock in today\u2019s rate', description: 'Rates are reviewed quarterly — open before the next revision.', primaryCta: { label: 'Open a deposit', path: '/customer-login' }, secondaryCta: { label: 'Talk to an advisor', path: '/contact' } },
+    cta: { title: 'Lock in today\u2019s rate', description: 'Rates are reviewed quarterly — open before the next revision.', primaryCta: { label: 'Open a deposit', path: '/open-account?type=deposit' }, secondaryCta: { label: 'Talk to an advisor', path: '/contact' } },
   },
 
   consumerLoans: {
@@ -687,7 +687,7 @@ export const pagesData = {
       icon: 'HandCoins', eyebrow: 'Loans',
       title: 'Know your EMI before you fill a single form',
       description: 'Home, personal, auto and education loans with instant eligibility checks and minimal paperwork for salaried and self-employed applicants.',
-      primaryCta: { label: 'Check eligibility', path: '/customer-login' },
+      primaryCta: { label: 'Check eligibility', path: '/open-account?type=loan' },
       secondaryCta: { label: 'Pay an existing EMI', path: '/online-loan-payments' },
     },
     overview: {
@@ -714,10 +714,10 @@ export const pagesData = {
       title: 'Loan products',
       subtitle: 'Indicative starting rates — your final rate depends on credit profile.',
       items: [
-        { icon: 'House', badge: '8.35% p.a.', title: 'Home Loan', desc: 'Up to ₹5 Cr, tenure up to 30 years.', features: ['Balance transfer available', 'Top-up loan option'], cta: { label: 'Check eligibility', path: '/customer-login' } },
-        { icon: 'HandCoins', badge: '10.5% p.a.', title: 'Personal Loan', desc: 'Up to ₹40L, disbursed in 24 hours.', features: ['No collateral required', 'Flexible 1–5 year tenure'], cta: { label: 'Check eligibility', path: '/customer-login' } },
-        { icon: 'CircleDollarSign', badge: '8.75% p.a.', title: 'Auto Loan', desc: 'Up to 100% on-road funding.', features: ['New & used vehicles', 'Quick dealer disbursal'], cta: { label: 'Check eligibility', path: '/customer-login' } },
-        { icon: 'GraduationCap', badge: '9% p.a.', title: 'Education Loan', desc: 'For domestic & international study.', features: ['Moratorium during course', 'Covers tuition & living costs'], cta: { label: 'Check eligibility', path: '/customer-login' } },
+        { icon: 'House', badge: '8.35% p.a.', title: 'Home Loan', desc: 'Up to ₹5 Cr, tenure up to 30 years.', features: ['Balance transfer available', 'Top-up loan option'], cta: { label: 'Check eligibility', path: '/open-account?type=loan' } },
+        { icon: 'HandCoins', badge: '10.5% p.a.', title: 'Personal Loan', desc: 'Up to ₹40L, disbursed in 24 hours.', features: ['No collateral required', 'Flexible 1–5 year tenure'], cta: { label: 'Check eligibility', path: '/open-account?type=loan' } },
+        { icon: 'CircleDollarSign', badge: '8.75% p.a.', title: 'Auto Loan', desc: 'Up to 100% on-road funding.', features: ['New & used vehicles', 'Quick dealer disbursal'], cta: { label: 'Check eligibility', path: '/open-account?type=loan' } },
+        { icon: 'GraduationCap', badge: '9% p.a.', title: 'Education Loan', desc: 'For domestic & international study.', features: ['Moratorium during course', 'Covers tuition & living costs'], cta: { label: 'Check eligibility', path: '/open-account?type=loan' } },
       ],
     },
     faq: {
@@ -736,7 +736,7 @@ export const pagesData = {
         { icon: 'ShieldCheck', title: 'Insurance Claim', path: '/insurance-claim' },
       ],
     },
-    cta: { title: 'Ready to check your eligibility?', description: 'Get an instant indicative approval amount — no paperwork required yet.', primaryCta: { label: 'Check eligibility', path: '/customer-login' }, secondaryCta: { label: 'Talk to a loan advisor', path: '/contact' } },
+    cta: { title: 'Ready to check your eligibility?', description: 'Get an instant indicative approval amount — no paperwork required yet.', primaryCta: { label: 'Check eligibility', path: '/open-account?type=loan' }, secondaryCta: { label: 'Talk to a loan advisor', path: '/contact' } },
   },
 
   creditCards: {
@@ -746,7 +746,7 @@ export const pagesData = {
       icon: 'CreditCard', eyebrow: 'Credit Cards',
       title: 'Metal cards that reward how you actually spend',
       description: 'Platinum, Signature and Infinite tiers with real-time spend tracking, lounge access, and rewards that don\u2019t expire in 90 days.',
-      primaryCta: { label: 'Apply now', path: '/customer-login' },
+      primaryCta: { label: 'Apply now', path: '/open-account?type=creditcard' },
       secondaryCta: { label: 'Pay a card bill', path: '/cards/bill-payment' },
     },
     overview: {
@@ -773,9 +773,9 @@ export const pagesData = {
       title: 'Choose your card',
       subtitle: 'All cards include contactless payments and IBS Rewards.',
       items: [
-        { icon: 'CreditCard', badge: 'Entry', title: 'IBS Platinum', desc: 'Zero joining fee, everyday rewards.', features: ['1% cashback on all spends', '4 airport lounge visits/year'], variant: 'card', cta: { label: 'Apply now', path: '/customer-login' } },
-        { icon: 'Sparkles', badge: 'Mid-tier', title: 'IBS Signature', desc: 'Travel & dining focused rewards.', features: ['5x points on travel & dining', '8 lounge visits/year'], variant: 'card', cta: { label: 'Apply now', path: '/customer-login' } },
-        { icon: 'Gem', badge: 'Premium', title: 'IBS Infinite', desc: 'Unlimited lounge access, concierge.', features: ['Unlimited airport lounges', 'Dedicated concierge desk'], variant: 'card', cta: { label: 'Apply now', path: '/customer-login' } },
+        { icon: 'CreditCard', badge: 'Entry', title: 'IBS Platinum', desc: 'Zero joining fee, everyday rewards.', features: ['1% cashback on all spends', '4 airport lounge visits/year'], variant: 'card', cta: { label: 'Apply now', path: '/open-account?type=creditcard' } },
+        { icon: 'Sparkles', badge: 'Mid-tier', title: 'IBS Signature', desc: 'Travel & dining focused rewards.', features: ['5x points on travel & dining', '8 lounge visits/year'], variant: 'card', cta: { label: 'Apply now', path: '/open-account?type=creditcard' } },
+        { icon: 'Gem', badge: 'Premium', title: 'IBS Infinite', desc: 'Unlimited lounge access, concierge.', features: ['Unlimited airport lounges', 'Dedicated concierge desk'], variant: 'card', cta: { label: 'Apply now', path: '/open-account?type=creditcard' } },
       ],
     },
     faq: {
@@ -794,7 +794,7 @@ export const pagesData = {
         { icon: 'Gift', title: 'IBS Rewards', path: '/personal-banking/ibs-rewards' },
       ],
     },
-    cta: { title: 'Find your card in under 2 minutes', description: 'Check pre-approved offers based on your existing relationship.', primaryCta: { label: 'Apply now', path: '/customer-login' }, secondaryCta: { label: 'Compare all cards', path: '#' } },
+    cta: { title: 'Find your card in under 2 minutes', description: 'Check pre-approved offers based on your existing relationship.', primaryCta: { label: 'Apply now', path: '/open-account?type=creditcard' }, secondaryCta: { label: 'Compare all cards', path: '#' } },
   },
 
   debitCards: {
@@ -861,7 +861,7 @@ export const pagesData = {
       icon: 'Gift', eyebrow: 'Prepaid Cards',
       title: 'Load it once, spend it anywhere',
       description: 'Forex travel cards, gift cards and corporate prepaid cards — no bank account linkage required to get started.',
-      primaryCta: { label: 'Order a card', path: '/customer-login' },
+      primaryCta: { label: 'Order a card', path: '/open-account?type=prepaid' },
       secondaryCta: { label: 'Corporate bulk orders', path: '/contact' },
     },
     overview: {
@@ -887,8 +887,8 @@ export const pagesData = {
     cards: {
       title: 'Prepaid card types',
       items: [
-        { icon: 'Globe', title: 'Forex Travel Card', desc: 'Multi-currency card for international trips.', features: ['Locked exchange rate', 'Free ATM withdrawals abroad (limited)'], variant: 'card', cta: { label: 'Order now', path: '/customer-login' } },
-        { icon: 'Gift', title: 'Gift Card', desc: 'Preloaded cards for gifting, ₹500–₹25,000.', features: ['No KYC for recipient', 'Valid for 3 years'], variant: 'card', cta: { label: 'Order now', path: '/customer-login' } },
+        { icon: 'Globe', title: 'Forex Travel Card', desc: 'Multi-currency card for international trips.', features: ['Locked exchange rate', 'Free ATM withdrawals abroad (limited)'], variant: 'card', cta: { label: 'Order now', path: '/open-account?type=prepaid' } },
+        { icon: 'Gift', title: 'Gift Card', desc: 'Preloaded cards for gifting, ₹500–₹25,000.', features: ['No KYC for recipient', 'Valid for 3 years'], variant: 'card', cta: { label: 'Order now', path: '/open-account?type=prepaid' } },
         { icon: 'Briefcase', title: 'Corporate Prepaid', desc: 'Bulk-issued cards for employee expenses.', features: ['Category-wise spend limits', 'Centralised reporting dashboard'], variant: 'card', cta: { label: 'Contact sales', path: '/contact' } },
       ],
     },
@@ -908,7 +908,7 @@ export const pagesData = {
         { icon: 'Store', title: 'Business Banking', path: '/business-banking' },
       ],
     },
-    cta: { title: 'Order a prepaid card today', description: 'Delivered within 3–5 working days across India.', primaryCta: { label: 'Order now', path: '/customer-login' }, secondaryCta: { label: 'Corporate enquiries', path: '/contact' } },
+    cta: { title: 'Order a prepaid card today', description: 'Delivered within 3–5 working days across India.', primaryCta: { label: 'Order now', path: '/open-account?type=prepaid' }, secondaryCta: { label: 'Corporate enquiries', path: '/contact' } },
   },
 
   nriBanking: {
@@ -918,7 +918,7 @@ export const pagesData = {
       icon: 'Globe', eyebrow: 'NRI Banking',
       title: 'Banking in India, without being in India',
       description: 'NRE, NRO and FCNR accounts opened remotely, with zero forex markup and dedicated NRI relationship support.',
-      primaryCta: { label: 'Start account opening', path: '/contact' },
+      primaryCta: { label: 'Start account opening', path: '/open-account?type=nri' },
       secondaryCta: { label: 'Compare account types', path: '#' },
     },
     overview: {
@@ -944,9 +944,9 @@ export const pagesData = {
     cards: {
       title: 'NRI account types',
       items: [
-        { icon: 'Landmark', title: 'NRE Account', desc: 'Repatriable, tax-free interest in India.', features: ['Fully repatriable', 'Interest exempt from Indian tax'], cta: { label: 'Learn more', path: '/contact' } },
-        { icon: 'Building2', title: 'NRO Account', desc: 'For income earned within India.', features: ['Manage rent, dividends, pensions', 'Limited repatriation allowed'], cta: { label: 'Learn more', path: '/contact' } },
-        { icon: 'ShieldCheck', title: 'FCNR Deposit', desc: 'Foreign-currency fixed deposits.', features: ['No exchange rate risk', 'Available in 6 major currencies'], cta: { label: 'Learn more', path: '/contact' } },
+        { icon: 'Landmark', title: 'NRE Account', desc: 'Repatriable, tax-free interest in India.', features: ['Fully repatriable', 'Interest exempt from Indian tax'], cta: { label: 'Learn more', path: '/open-account?type=nri' } },
+        { icon: 'Building2', title: 'NRO Account', desc: 'For income earned within India.', features: ['Manage rent, dividends, pensions', 'Limited repatriation allowed'], cta: { label: 'Learn more', path: '/open-account?type=nri' } },
+        { icon: 'ShieldCheck', title: 'FCNR Deposit', desc: 'Foreign-currency fixed deposits.', features: ['No exchange rate risk', 'Available in 6 major currencies'], cta: { label: 'Learn more', path: '/open-account?type=nri' } },
       ],
     },
     faq: {

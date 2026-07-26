@@ -2,6 +2,7 @@ export const footerColumns = [
   {
     heading: 'Products',
     links: [
+      { label: 'Open an Account', path: '/open-account' },
       { label: 'Savings Account', path: '/personal-banking/savings-account' },
       { label: 'Fixed Deposits', path: '/personal-banking/deposits' },
       { label: 'Credit Cards', path: '/personal-banking/cards/credit-cards' },
