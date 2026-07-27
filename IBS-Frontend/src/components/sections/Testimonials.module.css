@@ -1,4 +1,19 @@
-.swiper { padding-bottom: 12px; }
+.headRow { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.heading { margin-bottom: 0 !important; flex: 1; }
+.navBtns { display: flex; gap: 10px; margin-bottom: 52px; flex-shrink: 0; }
+.navBtns button {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border-glass-strong);
+  background: rgba(255, 255, 255, 0.03); color: var(--color-text-secondary); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: all var(--transition-fast);
+}
+.navBtns button:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+.track {
+  display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 12px; scrollbar-width: none;
+}
+.track::-webkit-scrollbar { display: none; }
+.slide { flex: 0 0 min(360px, 85vw); scroll-snap-align: start; }
 .card { height: 100%; display: flex; flex-direction: column; gap: 16px; }
 .stars { display: flex; gap: 3px; }
 .starOn { color: var(--color-warning); }
@@ -8,3 +23,5 @@
 .avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: #041022; font-weight: 700; font-size: 13px; flex-shrink: 0; }
 .person strong { display: block; font-size: 14px; color: var(--color-text); }
 .person span { display: block; font-size: 12.5px; color: var(--color-muted); }
+
+@media (max-width: 640px) { .navBtns { display: none; } }

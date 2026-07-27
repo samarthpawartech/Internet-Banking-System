@@ -1,7 +1,5 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Button from '../ui/Button.jsx';
 import DynamicIcon from '../../utils/iconMap.jsx';
 import useMousePosition from '../../hooks/useMousePosition.js';
@@ -10,31 +8,52 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
   const { ref, onMouseMove } = useMousePosition();
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setActive((i) => (i + 1) % heroSlides.length), 5500);
+    return () => clearInterval(id);
+  }, []);
+
+  const slide = heroSlides[active];
 
   return (
     <section className={styles.hero} ref={ref} onMouseMove={onMouseMove}>
       <div className={styles.meshGlow} />
       <div className={`container ${styles.grid}`}>
         <div className={styles.textCol}>
-          <Swiper modules={[Autoplay]} autoplay={{ delay: 5500, disableOnInteraction: false }} loop speed={700} className={styles.swiper}>
-            {heroSlides.map((slide) => (
-              <SwiperSlide key={slide.title}>
-                <motion.span className="eyebrow" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                  {slide.eyebrow}
-                </motion.span>
-                <motion.h1 className={styles.title} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.08 }}>
-                  {slide.title} <span className="gradientText">{slide.highlight}</span>
-                </motion.h1>
-                <motion.p className={styles.desc} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.16 }}>
-                  {slide.desc}
-                </motion.p>
-                <motion.div className={styles.ctas} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.24 }}>
+          <div className={styles.slideViewport}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -18 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className={styles.slide}
+              >
+                <span className="eyebrow">{slide.eyebrow}</span>
+                <h1 className={styles.title}>{slide.title} <span className="gradientText">{slide.highlight}</span></h1>
+                <p className={styles.desc}>{slide.desc}</p>
+                <div className={styles.ctas}>
                   <Button to={slide.primaryCta.path} size="lg" icon="ArrowRight">{slide.primaryCta.label}</Button>
                   <Button to={slide.secondaryCta.path} variant="outline" size="lg">{slide.secondaryCta.label}</Button>
-                </motion.div>
-              </SwiperSlide>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className={styles.dots}>
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`${styles.dot} ${i === active ? styles.dotActive : ''}`}
+                onClick={() => setActive(i)}
+                aria-label={`Go to slide ${i + 1}`}
+              />
             ))}
-          </Swiper>
+          </div>
 
           <div className={styles.trustRow}>
             <span><DynamicIcon name="ShieldCheck" size={16} />RBI-licensed</span>

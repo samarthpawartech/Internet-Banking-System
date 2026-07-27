@@ -1,8 +1,12 @@
 import { useInView } from 'react-intersection-observer';
-import CountUp from 'react-countup';
+import * as ReactCountUpNS from 'react-countup';
 import DynamicIcon from '../../utils/iconMap.jsx';
 import GlassCard from './GlassCard.jsx';
 import styles from './StatCard.module.css';
+
+// react-countup's default export can resolve as a wrapped { default: CountUp } object
+// depending on the bundler's CJS/ESM interop — unwrap defensively so it works either way.
+const CountUp = ReactCountUpNS.default?.default || ReactCountUpNS.default;
 
 export default function StatCard({ icon, value, prefix = '', suffix = '', decimals = 0, label, delay = 0 }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 });

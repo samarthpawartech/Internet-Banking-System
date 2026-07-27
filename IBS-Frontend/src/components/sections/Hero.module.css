@@ -26,8 +26,16 @@
   padding-block: 40px 60px;
 }
 
-.swiper { min-height: 300px; }
-.swiper :global(.swiper-slide) { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.slideViewport { min-height: 300px; display: flex; align-items: flex-start; }
+.slide { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+
+.dots { display: flex; gap: 8px; margin-top: 24px; }
+.dot {
+  width: 28px; height: 4px; border-radius: var(--radius-full); border: none; cursor: pointer;
+  background: rgba(255, 255, 255, 0.15); transition: all var(--transition-fast); padding: 0;
+}
+.dot:hover { background: rgba(255, 255, 255, 0.3); }
+.dotActive { background: var(--color-accent); box-shadow: 0 0 8px var(--color-accent); width: 40px; }
 
 .title {
   font-size: clamp(2.4rem, 5vw, 3.9rem);
