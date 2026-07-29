@@ -1,0 +1,38 @@
+.wrap { display: flex; flex-direction: column; gap: 16px; }
+.searchRow {
+  display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: var(--radius-md);
+  background: var(--color-card-soft); border: 1px solid var(--border-glass); color: var(--color-muted);
+}
+.searchRow input { flex: 1; background: none; border: none; color: var(--color-text); font-size: 14px; }
+.searchRow input:focus { outline: none; }
+.count { font-size: 12px; color: var(--color-muted); flex-shrink: 0; }
+
+.tableScroll {
+  overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--border-glass);
+  background: var(--color-card-soft);
+}
+.table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+.table th {
+  text-align: left; padding: 14px 18px; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--color-muted); border-bottom: 1px solid var(--border-glass); white-space: nowrap;
+}
+.table td { padding: 14px 18px; border-bottom: 1px solid var(--border-glass); color: var(--color-text-secondary); vertical-align: middle; }
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr:hover { background: rgba(255, 255, 255, 0.02); }
+.empty { text-align: center; padding: 40px 18px; color: var(--color-muted); }
+.actionsHead { text-align: right; }
+.actionsCell { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+
+.actionBtn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: var(--radius-full);
+  font-size: 12.5px; font-weight: 600; cursor: pointer; border: 1px solid var(--border-glass-strong);
+  background: rgba(255, 255, 255, 0.03); color: var(--color-text-secondary); transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+.actionBtn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.actionBtn.success { border-color: rgba(0, 255, 149, 0.3); color: var(--color-success); }
+.actionBtn.success:hover { background: rgba(0, 255, 149, 0.1); }
+.actionBtn.danger { border-color: rgba(255, 77, 109, 0.3); color: var(--color-danger); }
+.actionBtn.danger:hover { background: rgba(255, 77, 109, 0.1); }
+.actionBtn.warning { border-color: rgba(255, 184, 0, 0.3); color: var(--color-warning); }
+.actionBtn.warning:hover { background: rgba(255, 184, 0, 0.1); }

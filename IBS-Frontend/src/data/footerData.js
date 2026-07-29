@@ -47,6 +47,8 @@ export const footerColumns = [
       { label: 'Careers', path: '/careers' },
       { label: 'Business Login', path: '/business-login' },
       { label: 'Agri & Food Business', path: '/business-banking/agri-and-food-business' },
+      { label: 'Employee Login', path: '/staff-login' },
+      { label: 'Admin Console', path: '/admin-login' },
     ],
   },
 ];

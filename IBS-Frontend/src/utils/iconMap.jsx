@@ -11,6 +11,9 @@ import {
   Coins, Gem, Crown, Plane, House, FileCheck, CircleAlert, Info, ThumbsUp, RefreshCw,
   Activity, Shield, Handshake, Store, ShoppingBag, Truck, PackageCheck, Sprout, Check,
   Timer, BadgeCheck, UserCheck, CircleDollarSign, UserPlus, LogIn, CircleUserRound,
+  Upload, Printer, FileSpreadsheet, Sheet, Snowflake, Trash2, Pencil, Undo2, ShieldOff,
+  UserX, History, ListChecks, CirclePause, CirclePlay, Funnel, Settings, SlidersHorizontal,
+  LockOpen, UserCog, DoorOpen, LogOut,
 } from 'lucide-react';
 
 export const iconMap = {
@@ -26,6 +29,9 @@ export const iconMap = {
   Coins, Gem, Crown, Plane, House, FileCheck, CircleAlert, Info, ThumbsUp, RefreshCw,
   Activity, Shield, Handshake, Store, ShoppingBag, Truck, PackageCheck, Sprout, Check,
   Timer, BadgeCheck, UserCheck, CircleDollarSign, UserPlus, LogIn, CircleUserRound,
+  Upload, Printer, FileSpreadsheet, Sheet, Snowflake, Trash2, Pencil, Undo2, ShieldOff,
+  UserX, History, ListChecks, CirclePause, CirclePlay, Funnel, Settings, SlidersHorizontal,
+  LockOpen, UserCog, DoorOpen, LogOut,
 };
 
 export default function DynamicIcon({ name, size = 20, strokeWidth = 1.8, className = '', ...rest }) {

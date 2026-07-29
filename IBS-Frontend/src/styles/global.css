@@ -166,3 +166,10 @@ ul, ol {
 @media (max-width: 640px) {
   html { font-size: 15px; }
 }
+
+@media print {
+  body::before, body::after { display: none !important; }
+  header, aside, nav, button, .no-print { display: none !important; }
+  body, .container { background: #fff !important; color: #000 !important; }
+  * { box-shadow: none !important; text-shadow: none !important; }
+}
