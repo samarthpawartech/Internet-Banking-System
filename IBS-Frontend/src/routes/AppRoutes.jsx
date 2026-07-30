@@ -38,21 +38,21 @@ import StaffLogin from '../pages/StaffLogin.jsx';
 import AdminLogin from '../pages/AdminLogin.jsx';
 import NotFound from '../pages/NotFound.jsx';
 
-import PortalLayout from '../pages/portal/PortalLayout.jsx';
-import PortalOverview from '../pages/portal/PortalOverview.jsx';
-import PortalStatement from '../pages/portal/PortalStatement.jsx';
-import PortalTransfer from '../pages/portal/PortalTransfer.jsx';
-import PortalBeneficiaries from '../pages/portal/PortalBeneficiaries.jsx';
-import PortalBills from '../pages/portal/PortalBills.jsx';
-import PortalCards from '../pages/portal/PortalCards.jsx';
-import PortalProfile from '../pages/portal/PortalProfile.jsx';
+import CustomerLayout from '../pages/customer/CustomerLayout.jsx';
+import CustomerOverview from '../pages/customer/CustomerOverview.jsx';
+import CustomerStatement from '../pages/customer/CustomerStatement.jsx';
+import CustomerTransfer from '../pages/customer/CustomerTransfer.jsx';
+import CustomerBeneficiaries from '../pages/customer/CustomerBeneficiaries.jsx';
+import CustomerBills from '../pages/customer/CustomerBills.jsx';
+import CustomerCards from '../pages/customer/CustomerCards.jsx';
+import CustomerProfile from '../pages/customer/CustomerProfile.jsx';
 
-import StaffLayout from '../pages/staff/StaffLayout.jsx';
-import StaffDashboard from '../pages/staff/StaffDashboard.jsx';
-import StaffCustomers from '../pages/staff/StaffCustomers.jsx';
-import StaffAccounts from '../pages/staff/StaffAccounts.jsx';
-import StaffTransactions from '../pages/staff/StaffTransactions.jsx';
-import StaffReports from '../pages/staff/StaffReports.jsx';
+import EmployeeLayout from '../pages/employee/EmployeeLayout.jsx';
+import EmployeeDashboard from '../pages/employee/EmployeeDashboard.jsx';
+import EmployeeCustomers from '../pages/employee/EmployeeCustomers.jsx';
+import EmployeeAccounts from '../pages/employee/EmployeeAccounts.jsx';
+import EmployeeTransactions from '../pages/employee/EmployeeTransactions.jsx';
+import EmployeeReports from '../pages/employee/EmployeeReports.jsx';
 
 import AdminLayout from '../pages/admin/AdminLayout.jsx';
 import AdminDashboard from '../pages/admin/AdminDashboard.jsx';
@@ -105,24 +105,24 @@ export default function AppRoutes() {
       </Route>
 
       <Route element={<ProtectedRoute role="customer" />}>
-        <Route element={<PortalLayout />}>
-          <Route path="/portal" element={<PortalOverview />} />
-          <Route path="/portal/statement" element={<PortalStatement />} />
-          <Route path="/portal/transfer" element={<PortalTransfer />} />
-          <Route path="/portal/beneficiaries" element={<PortalBeneficiaries />} />
-          <Route path="/portal/bills" element={<PortalBills />} />
-          <Route path="/portal/cards" element={<PortalCards />} />
-          <Route path="/portal/profile" element={<PortalProfile />} />
+        <Route element={<CustomerLayout />}>
+          <Route path="/customer" element={<CustomerOverview />} />
+          <Route path="/customer/statement" element={<CustomerStatement />} />
+          <Route path="/customer/transfer" element={<CustomerTransfer />} />
+          <Route path="/customer/beneficiaries" element={<CustomerBeneficiaries />} />
+          <Route path="/customer/bills" element={<CustomerBills />} />
+          <Route path="/customer/cards" element={<CustomerCards />} />
+          <Route path="/customer/profile" element={<CustomerProfile />} />
         </Route>
       </Route>
 
       <Route element={<ProtectedRoute role="employee" />}>
-        <Route element={<StaffLayout />}>
-          <Route path="/staff" element={<StaffDashboard />} />
-          <Route path="/staff/customers" element={<StaffCustomers />} />
-          <Route path="/staff/accounts" element={<StaffAccounts />} />
-          <Route path="/staff/transactions" element={<StaffTransactions />} />
-          <Route path="/staff/reports" element={<StaffReports />} />
+        <Route element={<EmployeeLayout />}>
+          <Route path="/employee" element={<EmployeeDashboard />} />
+          <Route path="/employee/customers" element={<EmployeeCustomers />} />
+          <Route path="/employee/accounts" element={<EmployeeAccounts />} />
+          <Route path="/employee/transactions" element={<EmployeeTransactions />} />
+          <Route path="/employee/reports" element={<EmployeeReports />} />
         </Route>
       </Route>
 

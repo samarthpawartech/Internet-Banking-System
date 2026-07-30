@@ -1,5 +1,5 @@
-import AuthForm from '../components/auth/AuthForm.jsx';
+import UnifiedLogin from '../components/auth/UnifiedLogin.jsx';
 
 export default function CustomerLogin() {
-  return <AuthForm variant="customer" />;
+  return <UnifiedLogin defaultRole="customer" />;
 }

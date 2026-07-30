@@ -1,5 +1,5 @@
-import StaffAuthForm from '../components/auth/StaffAuthForm.jsx';
+import UnifiedLogin from '../components/auth/UnifiedLogin.jsx';
 
 export default function AdminLogin() {
-  return <StaffAuthForm role="admin" />;
+  return <UnifiedLogin defaultRole="admin" />;
 }
