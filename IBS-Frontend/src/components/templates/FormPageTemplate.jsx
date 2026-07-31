@@ -52,7 +52,6 @@ export default function FormPageTemplate({ data }) {
                   <p>{successDesc}</p>
                   <div className={`${styles.refId} mono`}>Reference ID: {refId}</div>
                   <Button variant="outline" onClick={reset}>Submit another request</Button>
-                  <span className={styles.demoNote}>Demo environment — no real transaction has taken place.</span>
                 </motion.div>
               ) : (
                 <motion.form key="form" onSubmit={handleSubmit} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.form}>

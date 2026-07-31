@@ -7,7 +7,7 @@ import DynamicIcon from '../../utils/iconMap.jsx';
 import styles from './AuthForm.module.css';
 
 // Business Net Banking login. This is illustrative only (no business-account store
-// exists in this demo) \u2014 the real, store-backed logins for Customer / Employee / Admin
+// exists in this demo) — the real, store-backed logins for Customer / Employee / Admin
 // live in UnifiedLogin.jsx.
 export default function AuthForm() {
   const [mode, setMode] = useState('password');
@@ -39,7 +39,6 @@ export default function AuthForm() {
         <span className={styles.blob1} /><span className={styles.blob2} />
       </div>
       <GlassCard hover={false} padding="lg" glow="purple" className={styles.card}>
-        <span className={styles.demoBadge}>DEMO</span>
         <div className={styles.header}>
           <div className={styles.icon}><DynamicIcon name="Building2" size={24} /></div>
           <h1>Business Net Banking</h1>
@@ -50,8 +49,8 @@ export default function AuthForm() {
           {status === 'success' ? (
             <motion.div key="success" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className={styles.success}>
               <DynamicIcon name="CircleCheckBig" size={40} className={styles.successIcon} />
-              <h3>Login successful (Demo)</h3>
-              <p>This business net banking flow is a UI showcase \u2014 no real account was accessed.</p>
+              <h3>Login successful</h3>
+              <p>This business net banking flow is a UI showcase — no real account was accessed.</p>
               <Button to="/" variant="outline">Back to Home</Button>
             </motion.div>
           ) : (
@@ -102,7 +101,7 @@ export default function AuthForm() {
                 )}
 
                 <Button type="submit" size="lg" disabled={status === 'loading' || (mode === 'otp' && !otpSent)} className={styles.submitBtn}>
-                  {status === 'loading' ? 'Verifying\u2026' : 'Login'}
+                  {status === 'loading' ? 'Verifying…' : 'Login'}
                 </Button>
               </form>
 

@@ -44,8 +44,8 @@ export default function CustomerCards() {
                   <DynamicIcon name="CreditCard" size={24} style={{ color: 'var(--color-accent)' }} />
                   {c.status === 'blocked' && <DynamicIcon name="Snowflake" size={18} style={{ color: 'var(--color-danger)' }} />}
                 </div>
-                <div className="mono" style={{ fontSize: 14, marginBottom: 6 }}>\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 {c.id.slice(-4).toUpperCase()}</div>
-                <div style={{ fontSize: 13, color: 'var(--color-muted)', marginBottom: 16, textTransform: 'capitalize' }}>{c.type} \u00b7 {c.status}</div>
+                <div className="mono" style={{ fontSize: 14, marginBottom: 6 }}>•••• •••• •••• {c.id.slice(-4).toUpperCase()}</div>
+                <div style={{ fontSize: 13, color: 'var(--color-muted)', marginBottom: 16, textTransform: 'capitalize' }}>{c.type} · {c.status}</div>
                 <Button variant="outline" size="sm" icon={c.status === 'blocked' ? 'LockOpen' : 'Snowflake'} onClick={() => toggleBlock(c.id)} style={{ width: '100%' }}>
                   {c.status === 'blocked' ? 'Unblock Card' : 'Block Card'}
                 </Button>
@@ -66,7 +66,7 @@ export default function CustomerCards() {
               <DynamicIcon name="CircleCheckBig" size={24} style={{ color: 'var(--color-success)' }} />
               <div>
                 <strong style={{ display: 'block', fontSize: 14 }}>Cheque book requested</strong>
-                <span style={{ fontSize: 13, color: 'var(--color-muted)' }}>Reference {chequeRef} \u2014 dispatched to your registered address within 7 working days.</span>
+                <span style={{ fontSize: 13, color: 'var(--color-muted)' }}>Reference {chequeRef} — dispatched to your registered address within 7 working days.</span>
               </div>
             </div>
           ) : (

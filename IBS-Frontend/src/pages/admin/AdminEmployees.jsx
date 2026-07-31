@@ -29,7 +29,9 @@ export default function AdminEmployees() {
       const patch = { name: form.name, email: form.email, branch: form.branch };
       updateEmployee(editing.id, patch, session.username);
     } else {
-      addEmployee({ ...form, password: form.password || 'demo123' }, session.username);
+      const generated = form.password || Math.random().toString(36).slice(2, 10);
+      addEmployee({ ...form, password: generated }, session.username);
+      if (!form.password) setTempPassword({ name: form.name, pass: generated });
     }
     setFormOpen(false);
     refresh();
@@ -77,8 +79,8 @@ export default function AdminEmployees() {
 
       <Modal
         open={!!tempPassword}
-        title="Password reset"
-        description={tempPassword ? `New temporary password for ${tempPassword.name}: ${tempPassword.pass} \u2014 share this securely, it won't be shown again.` : ''}
+        title="Temporary password generated"
+        description={tempPassword ? `Temporary password for ${tempPassword.name}: ${tempPassword.pass} — share this securely, it won't be shown again.` : ''}
         confirmLabel="Done"
         tone="success"
         onConfirm={() => setTempPassword(null)}
@@ -101,7 +103,7 @@ export function PersonFormModal({ title, form, setForm, showPassword, showBranch
             <div className={sh.field}><label>Username<span className={sh.req}>*</span></label><input required disabled={!showPassword} value={form.username} onChange={(e) => set('username', e.target.value)} /></div>
           )}
           {showPassword && (
-            <div className={sh.field}><label>Password (optional \u2014 defaults to demo123)</label><input value={form.password} onChange={(e) => set('password', e.target.value)} placeholder="demo123" /></div>
+            <div className={sh.field}><label>Password (optional — a temporary one will be generated)</label><input value={form.password} onChange={(e) => set('password', e.target.value)} placeholder="Leave blank to auto-generate" /></div>
           )}
           {showBranch && (
             <div className={sh.field}><label>Branch</label><input value={form.branch} onChange={(e) => set('branch', e.target.value)} placeholder="e.g. Bandra Kurla Complex" /></div>

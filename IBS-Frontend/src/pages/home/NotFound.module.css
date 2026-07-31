@@ -1,0 +1,13 @@
+.wrap { position: relative; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding: 24px; }
+.bg { position: absolute; inset: 0; z-index: 0; }
+.bg span { position: absolute; border-radius: 50%; filter: blur(90px); animation: pulseGlow 7s ease-in-out infinite; }
+.bg span:nth-child(1) { width: 420px; height: 420px; background: var(--color-secondary); opacity: 0.25; top: 10%; left: 10%; }
+.bg span:nth-child(2) { width: 380px; height: 380px; background: var(--color-purple); opacity: 0.22; bottom: 10%; right: 12%; animation-delay: 2s; }
+.bg span:nth-child(3) { width: 300px; height: 300px; background: var(--color-accent); opacity: 0.14; top: 50%; left: 50%; animation-delay: 4s; }
+.logo { position: absolute; top: 28px; left: clamp(20px, 5vw, 56px); display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 20px; z-index: 1; }
+.logoMark { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: #041022; }
+.content { position: relative; z-index: 1; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 520px; }
+.code { font-family: var(--font-mono); font-size: clamp(5rem, 14vw, 8rem); font-weight: 600; line-height: 1; background: var(--gradient-text); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 60px rgba(0,245,255,0.3); }
+.content h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+.content p { font-size: 15px; }
+.ctas { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; justify-content: center; }

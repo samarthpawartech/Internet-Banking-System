@@ -35,7 +35,7 @@ export default function EmployeeDashboard() {
         <div className={sh.panel}>
           <h3 className={sh.panelTitle}><DynamicIcon name="Clock" size={17} />Pending Customer Requests</h3>
           {pendingCustomers.length === 0 ? (
-            <div className={sh.emptyState}><DynamicIcon name="CircleCheckBig" size={26} /><p>All caught up \u2014 no pending KYC.</p></div>
+            <div className={sh.emptyState}><DynamicIcon name="CircleCheckBig" size={26} /><p>All caught up — no pending KYC.</p></div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {pendingCustomers.slice(0, 5).map((c) => (

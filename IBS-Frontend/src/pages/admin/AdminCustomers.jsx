@@ -35,7 +35,7 @@ export default function AdminCustomers() {
       <div className={sh.pageHeader}>
         <div>
           <h1 className={sh.pageTitle}>Customer Management</h1>
-          <p className={sh.pageSubtitle}>Full view of every customer. Locking is separate from an employee's account freeze \u2014 use it for security holds.</p>
+          <p className={sh.pageSubtitle}>Full view of every customer. Locking is separate from an employee's account freeze — use it for security holds.</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ export default function AdminCustomers() {
       <Modal
         open={!!deleteTarget}
         title="Delete this customer?"
-        description={`This permanently removes ${deleteTarget?.fullName}'s record, including balance and transaction history, from this demo database.`}
+        description={`This permanently removes ${deleteTarget?.fullName}'s record, including balance and transaction history.`}
         confirmLabel="Delete Permanently"
         tone="danger"
         onConfirm={handleDelete}

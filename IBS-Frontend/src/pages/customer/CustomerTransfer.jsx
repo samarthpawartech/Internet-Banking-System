@@ -22,7 +22,7 @@ export default function CustomerTransfer() {
       <div className={sh.pageHeader}>
         <div>
           <h1 className={sh.pageTitle}>Transfer & Deposits</h1>
-          <p className={sh.pageSubtitle}>Transfers above {formatINR(autoLimit)} need employee approval. Deposit requests always do \u2014 someone has to verify the cash or cheque.</p>
+          <p className={sh.pageSubtitle}>Transfers above {formatINR(autoLimit)} need employee approval. Deposit requests always do — someone has to verify the cash or cheque.</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function CustomerTransfer() {
           <p style={{ fontSize: 13, color: 'var(--color-muted)' }}>Account {customer.accountNumber}</p>
           <div style={{ marginTop: 20, padding: 14, borderRadius: 10, background: 'rgba(0,245,255,0.05)', border: '1px solid rgba(0,245,255,0.2)', fontSize: 12.5, color: 'var(--color-text-secondary)' }}>
             {tab === 'transfer'
-              ? <>Auto-approved up to <strong className="mono">{formatINR(autoLimit)}</strong>. Larger transfers wait for employee review \u2014 set by Admin under Banking Settings.</>
+              ? <>Auto-approved up to <strong className="mono">{formatINR(autoLimit)}</strong>. Larger transfers wait for employee review — set by Admin under Banking Settings.</>
               : <>Deposit requests are always verified by an employee before the balance updates, regardless of amount.</>}
           </div>
         </div>
@@ -103,7 +103,7 @@ function TransferForm({ customer, beneficiaries, disabled, autoLimit }) {
             {beneficiaries.length > 0 ? (
               <select value={beneficiary} onChange={(e) => setBeneficiary(e.target.value)} disabled={disabled}>
                 <option value="">Select a saved beneficiary</option>
-                {beneficiaries.map((b) => <option key={b.id} value={b.name}>{b.name} \u2014 {b.accountNumber}</option>)}
+                {beneficiaries.map((b) => <option key={b.id} value={b.name}>{b.name} — {b.accountNumber}</option>)}
                 <option value="__new">Enter a new beneficiary...</option>
               </select>
             ) : (
@@ -112,7 +112,7 @@ function TransferForm({ customer, beneficiaries, disabled, autoLimit }) {
             {beneficiary === '__new' && <input autoFocus placeholder="Type beneficiary name" onChange={(e) => setBeneficiary(e.target.value)} style={{ marginTop: 8 }} />}
           </div>
           <div className={sh.field}>
-            <label>Amount (\u20b9)<span className={sh.req}>*</span></label>
+            <label>Amount (₹)<span className={sh.req}>*</span></label>
             <input type="number" min="1" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="e.g. 5000" disabled={disabled} />
           </div>
           <div className={sh.field}>
@@ -121,7 +121,7 @@ function TransferForm({ customer, beneficiaries, disabled, autoLimit }) {
           </div>
           {error && <div className={`${sh.banner} ${sh.danger}`} style={{ marginBottom: 0 }}><DynamicIcon name="CircleAlert" size={16} />{error}</div>}
           <Button type="submit" size="lg" disabled={disabled || status === 'submitting'}>
-            {status === 'submitting' ? 'Processing\u2026' : 'Send Money'}
+            {status === 'submitting' ? 'Processing…' : 'Send Money'}
           </Button>
         </motion.form>
       )}
@@ -174,7 +174,7 @@ function DepositForm({ customer, disabled }) {
             </select>
           </div>
           <div className={sh.field}>
-            <label>Amount (\u20b9)<span className={sh.req}>*</span></label>
+            <label>Amount (₹)<span className={sh.req}>*</span></label>
             <input type="number" min="1" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="e.g. 20000" disabled={disabled} />
           </div>
           <div className={sh.field}>
@@ -183,7 +183,7 @@ function DepositForm({ customer, disabled }) {
           </div>
           {error && <div className={`${sh.banner} ${sh.danger}`} style={{ marginBottom: 0 }}><DynamicIcon name="CircleAlert" size={16} />{error}</div>}
           <Button type="submit" size="lg" disabled={disabled || status === 'submitting'}>
-            {status === 'submitting' ? 'Submitting\u2026' : 'Submit Deposit Request'}
+            {status === 'submitting' ? 'Submitting…' : 'Submit Deposit Request'}
           </Button>
         </motion.form>
       )}

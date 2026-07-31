@@ -25,7 +25,7 @@ export default function AdminSecurity() {
     { key: 'timestamp', label: 'Time', render: (r) => new Date(r.timestamp).toLocaleString('en-IN') },
     { key: 'actor', label: 'Actor' },
     { key: 'action', label: 'Action' },
-    { key: 'target', label: 'Target', render: (r) => r.target ? <span className="mono">{r.target}</span> : '\u2014' },
+    { key: 'target', label: 'Target', render: (r) => r.target ? <span className="mono">{r.target}</span> : '—' },
   ];
   const customerColumns = [
     { key: 'fullName', label: 'Customer' },

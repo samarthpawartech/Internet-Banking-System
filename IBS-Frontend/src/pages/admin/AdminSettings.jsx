@@ -26,7 +26,7 @@ export default function AdminSettings() {
       <div className={sh.pageHeader}>
         <div>
           <h1 className={sh.pageTitle}>Banking Settings</h1>
-          <p className={sh.pageSubtitle}>These values drive real behaviour \u2014 the transaction limit below is the exact threshold customers hit on the Transfer page.</p>
+          <p className={sh.pageSubtitle}>These values drive real behaviour — the transaction limit below is the exact threshold customers hit on the Transfer page.</p>
         </div>
       </div>
 
@@ -42,7 +42,7 @@ export default function AdminSettings() {
         </div>
 
         <div className={sh.panel}>
-          <h3 className={sh.panelTitle}><DynamicIcon name="SlidersHorizontal" size={17} />Transaction Limits (\u20b9)</h3>
+          <h3 className={sh.panelTitle}><DynamicIcon name="SlidersHorizontal" size={17} />Transaction Limits (₹)</h3>
           <div className={sh.form}>
             <RateField label="Auto-approve up to" value={settings.transactionLimits?.autoApproveUpTo} onChange={(v) => setField('transactionLimits', 'autoApproveUpTo', v)} step="1000" />
             <RateField label="Daily transfer limit" value={settings.transactionLimits?.dailyLimit} onChange={(v) => setField('transactionLimits', 'dailyLimit', v)} step="1000" />
@@ -50,7 +50,7 @@ export default function AdminSettings() {
         </div>
 
         <div className={sh.panel}>
-          <h3 className={sh.panelTitle}><DynamicIcon name="Receipt" size={17} />Service Charges (\u20b9)</h3>
+          <h3 className={sh.panelTitle}><DynamicIcon name="Receipt" size={17} />Service Charges (₹)</h3>
           <div className={sh.form}>
             <RateField label="Cheque book (per book)" value={settings.serviceCharges?.chequeBook} onChange={(v) => setField('serviceCharges', 'chequeBook', v)} />
             <RateField label="Debit card annual fee" value={settings.serviceCharges?.debitCardAnnual} onChange={(v) => setField('serviceCharges', 'debitCardAnnual', v)} />
@@ -60,7 +60,7 @@ export default function AdminSettings() {
 
         <div className={sh.fieldFull} style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: 14 }}>
           <Button type="submit" icon="Check">Save Settings</Button>
-          {saved && <span style={{ fontSize: 13, color: 'var(--color-success)', display: 'flex', alignItems: 'center', gap: 6 }}><DynamicIcon name="CircleCheckBig" size={15} />Settings saved \u2014 new transfers will use these values immediately.</span>}
+          {saved && <span style={{ fontSize: 13, color: 'var(--color-success)', display: 'flex', alignItems: 'center', gap: 6 }}><DynamicIcon name="CircleCheckBig" size={15} />Settings saved — new transfers will use these values immediately.</span>}
         </div>
       </form>
     </div>

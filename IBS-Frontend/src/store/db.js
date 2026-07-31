@@ -46,26 +46,26 @@ export function seedIfNeeded() {
 
   const customers = [
     {
-      id: 'cust-demo-1', fullName: 'Ananya Iyer', email: 'ananya.demo@ibs.example', mobile: '9876500001',
-      username: 'ananya.demo', password: 'demo123', pan: 'ABCDE1234F', dob: '1994-03-12', city: 'Bengaluru',
+      id: 'cust-1', fullName: 'Ananya Iyer', email: 'ananya.iyer@ibs.example', mobile: '9876500001',
+      username: 'ananya.iyer', password: 'Welcome@123', pan: 'ABCDE1234F', dob: '1994-03-12', city: 'Bengaluru',
       accountNumber: 'IBS0100000001', kycStatus: 'verified', accountStatus: 'active', locked: false,
       balance: 84250, createdAt: nowIso(),
     },
     {
-      id: 'cust-demo-2', fullName: 'Rohit Malhotra', email: 'rohit.demo@ibs.example', mobile: '9876500002',
-      username: 'rohit.demo', password: 'demo123', pan: 'BCDEA2345G', dob: '1990-07-22', city: 'Mumbai',
+      id: 'cust-2', fullName: 'Rohit Malhotra', email: 'rohit.malhotra@ibs.example', mobile: '9876500002',
+      username: 'rohit.malhotra', password: 'Welcome@123', pan: 'BCDEA2345G', dob: '1990-07-22', city: 'Mumbai',
       accountNumber: 'IBS0100000002', kycStatus: 'pending', accountStatus: 'pending', locked: false,
       balance: 0, createdAt: nowIso(),
     },
   ];
   const employees = [
-    { id: 'emp-demo-1', name: 'Kavya Nair', email: 'kavya.emp@ibs.example', username: 'kavya.emp', password: 'demo123', branch: 'Bandra Kurla Complex, Mumbai', status: 'active', createdAt: nowIso() },
+    { id: 'emp-1', name: 'Kavya Nair', email: 'kavya.nair@ibs.example', username: 'kavya.nair', password: 'Welcome@123', branch: 'Bandra Kurla Complex, Mumbai', status: 'active', createdAt: nowIso() },
   ];
   const admins = [
-    { id: 'admin-demo-1', name: 'Arjun Verma', email: 'arjun.admin@ibs.example', username: 'arjun.admin', password: 'demo123', role: 'superadmin', status: 'active', createdAt: nowIso() },
+    { id: 'admin-1', name: 'Arjun Verma', email: 'arjun.verma@ibs.example', username: 'arjun.verma', password: 'Welcome@123', role: 'superadmin', status: 'active', createdAt: nowIso() },
   ];
   const transactions = [
-    { id: uid('txn'), customerId: 'cust-demo-1', type: 'deposit', amount: 50000, status: 'completed', date: nowIso(), note: 'Initial deposit', beneficiary: '' },
+    { id: uid('txn'), customerId: 'cust-1', type: 'deposit', amount: 50000, status: 'completed', date: nowIso(), note: 'Initial deposit', beneficiary: '' },
   ];
   const settings = {
     interestRates: { regularSavings: 3.5, premiumSavings: 4.5, seniorCitizen: 5.0, fixedDeposit: 7.75 },
@@ -79,7 +79,7 @@ export function seedIfNeeded() {
   write(KEYS.transactions, transactions);
   write(KEYS.beneficiaries, []);
   write(KEYS.cards, []);
-  write(KEYS.auditLogs, [{ id: uid('log'), actor: 'system', action: 'Database seeded with demo data', target: '', timestamp: nowIso() }]);
+  write(KEYS.auditLogs, [{ id: uid('log'), actor: 'system', action: 'System initialized', target: '', timestamp: nowIso() }]);
   write(KEYS.loginHistory, []);
   write(KEYS.settings, settings);
   window.localStorage.setItem(KEYS.seeded, '1');

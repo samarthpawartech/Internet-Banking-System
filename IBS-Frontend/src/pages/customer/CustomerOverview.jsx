@@ -31,7 +31,7 @@ export default function CustomerOverview() {
       {pending && (
         <div className={`${sh.banner} ${sh.warning}`}>
           <DynamicIcon name="Clock" size={20} />
-          <div><strong>Your account is pending verification.</strong> An IBS employee needs to review your KYC before transactions are enabled. This usually takes under a business day in the demo.</div>
+          <div><strong>Your account is pending verification.</strong> An IBS employee needs to review your KYC before transactions are enabled. This usually takes under a business day.</div>
         </div>
       )}
       {customer.locked && (
@@ -69,7 +69,7 @@ export default function CustomerOverview() {
             {recentTxns.map((t) => (
               <div key={t.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 4px', borderBottom: '1px solid var(--border-glass)' }}>
                 <div>
-                  <div style={{ fontSize: 14, color: 'var(--color-text)', textTransform: 'capitalize' }}>{t.type}{t.beneficiary ? ` \u2014 ${t.beneficiary}` : ''}</div>
+                  <div style={{ fontSize: 14, color: 'var(--color-text)', textTransform: 'capitalize' }}>{t.type}{t.beneficiary ? ` — ${t.beneficiary}` : ''}</div>
                   <div style={{ fontSize: 12, color: 'var(--color-muted)' }}>{new Date(t.date).toLocaleString('en-IN')}</div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>

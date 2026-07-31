@@ -106,7 +106,7 @@ export const newsItems = [
 export const homeFaq = [
   { q: 'How long does it take to open a savings account?', a: 'Most customers finish video-KYC and start using their virtual debit card in under 6 minutes. A physical card follows by post within 7 working days.' },
   { q: 'Is IBS a licensed bank?', a: 'IBS operates as a full-service internet banking system with RBI-aligned security and compliance practices, including two-factor authentication on every login.' },
-  { q: 'Can I get a loan without an existing IBS account?', a: 'Yes — use the EMI calculator to check indicative eligibility first, then apply; an existing account isn\u2019t required to start an application.' },
+  { q: 'Can I get a loan without an existing IBS account?', a: 'Yes — use the EMI calculator to check indicative eligibility first, then apply; an existing account isn’t required to start an application.' },
   { q: 'What happens if I lose my card?', a: 'Freeze it instantly from the Security Center in IBS Connect, then request a replacement — no call center wait required.' },
   { q: 'Does IBS charge for UPI transactions?', a: 'UPI transfers are free for personal accounts. Merchant payment fees, where applicable, are shown before you confirm a transaction.' },
 ];

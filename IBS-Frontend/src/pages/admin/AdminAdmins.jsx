@@ -17,6 +17,7 @@ export default function AdminAdmins() {
   const [editing, setEditing] = useState(null);
   const [form, setForm] = useState(empty);
   const [deleteTarget, setDeleteTarget] = useState(null);
+  const [tempPassword, setTempPassword] = useState(null);
 
   const refresh = () => setAdmins(getAdmins());
   const openAdd = () => { setForm(empty); setEditing(null); setFormOpen(true); };
@@ -27,7 +28,9 @@ export default function AdminAdmins() {
     if (editing) {
       updateAdmin(editing.id, { name: form.name, email: form.email, role: form.role }, session.username);
     } else {
-      addAdmin({ ...form, password: form.password || 'demo123' }, session.username);
+      const generated = form.password || Math.random().toString(36).slice(2, 10);
+      addAdmin({ ...form, password: generated }, session.username);
+      if (!form.password) setTempPassword({ name: form.name, pass: generated });
     }
     setFormOpen(false);
     refresh();
@@ -70,6 +73,16 @@ export default function AdminAdmins() {
       )}
 
       <Modal open={!!deleteTarget} title="Delete this admin?" description={`${deleteTarget?.name} will lose access immediately.`} confirmLabel="Delete" tone="danger" onConfirm={handleDelete} onCancel={() => setDeleteTarget(null)} />
+
+      <Modal
+        open={!!tempPassword}
+        title="Temporary password generated"
+        description={tempPassword ? `Temporary password for ${tempPassword.name}: ${tempPassword.pass} — share this securely, it won't be shown again.` : ''}
+        confirmLabel="Done"
+        tone="success"
+        onConfirm={() => setTempPassword(null)}
+        onCancel={() => setTempPassword(null)}
+      />
     </div>
   );
 }

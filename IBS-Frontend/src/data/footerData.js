@@ -27,7 +27,7 @@ export const footerColumns = [
       { label: 'Digital Banking', path: '/digital-banking' },
       { label: 'Pay Loan EMI', path: '/online-loan-payments' },
       { label: 'Credit Card Bill Pay', path: '/cards/bill-payment' },
-      { label: 'Customer Login', path: '/customer-login' },
+      { label: 'Consumer Login', path: '/customer-login' },
     ],
   },
   {

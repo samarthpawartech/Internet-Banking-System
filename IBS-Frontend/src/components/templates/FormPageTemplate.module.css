@@ -24,7 +24,6 @@
 .success h3 { font-size: 20px; }
 .success p { font-size: 14.5px; max-width: 380px; }
 .refId { padding: 10px 18px; border-radius: var(--radius-full); background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); font-size: 13.5px; margin: 6px 0 4px; }
-.demoNote { font-size: 12px; color: var(--color-muted); margin-top: 8px; }
 
 .sidebar { display: flex; flex-direction: column; gap: 16px; }
 .sidebarIcon { width: 46px; height: 46px; border-radius: var(--radius-md); background: var(--gradient-purple); display: flex; align-items: center; justify-content: center; color: #fff; }

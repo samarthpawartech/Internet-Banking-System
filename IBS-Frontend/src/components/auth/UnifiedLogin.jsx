@@ -10,26 +10,23 @@ import styles from './UnifiedLogin.module.css';
 
 const ROLES = [
   {
-    id: 'customer', label: 'Customer', icon: 'UserCheck',
-    idLabel: 'Username / Mobile Number', idPlaceholder: 'e.g. ananya.demo',
+    id: 'customer', label: 'Consumer', icon: 'UserCheck',
+    idLabel: 'Username / Mobile Number', idPlaceholder: 'Enter your username',
     title: 'Welcome back', subtitle: 'Log in to manage accounts, cards and transfers.',
-    homePath: '/customer', demoHint: 'ananya.demo / demo123  (or rohit.demo \u2014 pending KYC)',
-    supportsOtp: true,
+    homePath: '/customer', supportsOtp: true,
     registerText: 'New to IBS?', registerCta: 'Create an account', registerPath: '/register',
   },
   {
     id: 'employee', label: 'Employee', icon: 'UserCog',
-    idLabel: 'Employee Username', idPlaceholder: 'e.g. kavya.emp',
+    idLabel: 'Employee Username', idPlaceholder: 'Enter your username',
     title: 'Employee Portal', subtitle: 'Verify customers, approve transactions, manage accounts.',
-    homePath: '/employee', demoHint: 'kavya.emp / demo123',
-    supportsOtp: false,
+    homePath: '/employee', supportsOtp: false,
   },
   {
     id: 'admin', label: 'Admin', icon: 'ShieldCheck',
-    idLabel: 'Admin Username', idPlaceholder: 'e.g. arjun.admin',
+    idLabel: 'Admin Username', idPlaceholder: 'Enter your username',
     title: 'Admin Console', subtitle: 'Full control over employees, customers and banking settings.',
-    homePath: '/admin', demoHint: 'arjun.admin / demo123',
-    supportsOtp: false,
+    homePath: '/admin', supportsOtp: false,
   },
 ];
 
@@ -71,9 +68,8 @@ export default function UnifiedLogin({ defaultRole = 'customer' }) {
     setStatus('loading');
     window.setTimeout(() => {
       if (mode === 'otp') {
-        // No real OTP provider in this demo \u2014 treat a filled OTP as a successful illustrative login.
         setStatus('idle');
-        setError('OTP login is illustrative in this demo \u2014 use the Password tab to actually sign in.');
+        setError('OTP delivery isn’t connected yet — please sign in with your password for now.');
         return;
       }
       const result = doLogin(identifier.trim(), password);
@@ -86,18 +82,10 @@ export default function UnifiedLogin({ defaultRole = 'customer' }) {
     }, 700);
   };
 
-  const fillDemo = () => {
-    const [user, pass] = role.demoHint.split('/').map((s) => s.trim().split(' ')[0]);
-    setIdentifier(user);
-    setPassword(pass);
-  };
-
   return (
     <div className={styles.wrap}>
       <div className={styles.bg} aria-hidden="true"><span className={styles.blob1} /><span className={styles.blob2} /></div>
       <GlassCard hover={false} padding="lg" glow="purple" className={styles.card}>
-        <span className={styles.demoBadge}>DEMO</span>
-
         <div className={styles.roleRow}>
           <Tabs layoutId="unified-role-tab" tabs={ROLES.map((r) => ({ id: r.id, label: r.label }))} activeId={roleId} onChange={switchRole} />
         </div>
@@ -166,16 +154,9 @@ export default function UnifiedLogin({ defaultRole = 'customer' }) {
               </AnimatePresence>
 
               <Button type="submit" size="lg" disabled={status === 'loading' || (mode === 'otp' && !otpSent)} className={styles.submitBtn}>
-                {status === 'loading' ? 'Verifying\u2026' : `Sign In as ${role.label}`}
+                {status === 'loading' ? 'Verifying…' : `Sign In as ${role.label}`}
               </Button>
             </form>
-
-            {mode === 'password' && (
-              <button type="button" className={styles.demoHint} onClick={fillDemo}>
-                <DynamicIcon name="KeyRound" size={13} />
-                Demo login: <span className="mono">{role.demoHint}</span>
-              </button>
-            )}
 
             {role.registerPath && (
               <div className={styles.footer}>

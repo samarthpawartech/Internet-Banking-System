@@ -20,7 +20,7 @@ export default function FloatingChatButton() {
               <span className={styles.headIcon}><DynamicIcon name="Bot" size={18} /></span>
               <div>
                 <strong>Nova · IBS Assistant</strong>
-                <span className={styles.status}>● Online — demo preview</span>
+                <span className={styles.status}>● Online</span>
               </div>
               <button onClick={() => setOpen(false)}><DynamicIcon name="X" size={18} /></button>
             </div>

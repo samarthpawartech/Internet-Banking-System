@@ -44,7 +44,7 @@ export default function AdminReports() {
       <div className={sh.pageHeader}>
         <div>
           <h1 className={sh.pageTitle}>Reports</h1>
-          <p className={sh.pageSubtitle}>Monthly, revenue and transaction reports \u2014 export to CSV or print to PDF.</p>
+          <p className={sh.pageSubtitle}>Monthly, revenue and transaction reports — export to CSV or print to PDF.</p>
         </div>
         <div className={sh.headerActions}>
           <Button variant="outline" size="sm" icon="FileSpreadsheet" onClick={handleExport}>Export Excel (CSV)</Button>

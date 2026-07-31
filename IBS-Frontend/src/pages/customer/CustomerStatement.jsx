@@ -15,7 +15,7 @@ export default function CustomerStatement() {
   const columns = [
     { key: 'date', label: 'Date', render: (r) => new Date(r.date).toLocaleDateString('en-IN') },
     { key: 'type', label: 'Type', render: (r) => <span style={{ textTransform: 'capitalize' }}>{r.type}</span> },
-    { key: 'beneficiary', label: 'Details', render: (r) => r.beneficiary || r.note || '\u2014' },
+    { key: 'beneficiary', label: 'Details', render: (r) => r.beneficiary || r.note || '—' },
     { key: 'amount', label: 'Amount', render: (r) => <span className="mono">{r.type === 'deposit' ? '+' : '-'}{formatINR(r.amount)}</span> },
     { key: 'status', label: 'Status', render: (r) => <StatusBadge status={r.status} /> },
   ];

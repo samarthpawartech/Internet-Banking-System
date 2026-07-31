@@ -48,7 +48,7 @@ export default function MobileDrawer() {
             </nav>
             <div className={styles.actions}>
               <Button variant="outline" size="md" onClick={() => go('/business-login')} className={styles.fullBtn}>Business Login</Button>
-              <Button variant="primary" size="md" onClick={() => go('/customer-login')} className={styles.fullBtn}>Customer Login</Button>
+              <Button variant="primary" size="md" onClick={() => go('/customer-login')} className={styles.fullBtn}>Consumer Login</Button>
             </div>
           </motion.aside>
         </>

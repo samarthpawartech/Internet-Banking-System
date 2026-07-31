@@ -68,7 +68,7 @@ export default function CustomerBills() {
             <motion.div key="done" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={sh.successBox}>
               <div className={sh.successIcon}><DynamicIcon name={result.status === 'pending' ? 'Clock' : 'CircleCheckBig'} size={26} /></div>
               <h3>{result.status === 'pending' ? 'Payment pending approval' : 'Payment successful'}</h3>
-              <p>{formatINR(result.amount)} \u2014 {result.beneficiary}</p>
+              <p>{formatINR(result.amount)} — {result.beneficiary}</p>
               <Button variant="outline" onClick={reset}>Make another payment</Button>
             </motion.div>
           ) : (
@@ -89,12 +89,12 @@ export default function CustomerBills() {
                   <input value={mobile} onChange={(e) => setMobile(e.target.value)} placeholder="10-digit mobile number" disabled={disabled} />
                 </div>
               )}
-              <div className={sh.field}><label>Amount (\u20b9)<span className={sh.req}>*</span></label>
+              <div className={sh.field}><label>Amount (₹)<span className={sh.req}>*</span></label>
                 <input type="number" min="1" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="e.g. 1200" disabled={disabled} />
               </div>
               {error && <div className={`${sh.banner} ${sh.danger}`} style={{ marginBottom: 0 }}><DynamicIcon name="CircleAlert" size={16} />{error}</div>}
               <Button type="submit" size="lg" disabled={disabled || status === 'submitting'}>
-                {status === 'submitting' ? 'Processing\u2026' : tab === 'bill' ? 'Pay Bill' : 'Recharge Now'}
+                {status === 'submitting' ? 'Processing…' : tab === 'bill' ? 'Pay Bill' : 'Recharge Now'}
               </Button>
             </motion.form>
           )}

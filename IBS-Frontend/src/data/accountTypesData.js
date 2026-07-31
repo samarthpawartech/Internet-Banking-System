@@ -61,6 +61,6 @@ export const commonFields = [
 export const openAccountFaq = [
   { q: 'What documents will I need?', a: 'PAN, Aadhaar (or passport for NRI applications), a recent photograph, and — for business accounts — your business registration certificate.' },
   { q: 'How long does approval take?', a: 'Savings and salary accounts are typically approved within a few hours of video-KYC; cards and loans take 1-3 business days for underwriting.' },
-  { q: 'Can I switch account type after applying?', a: 'Yes — contact support with your reference ID before your video-KYC call and we\u2019ll update your application.' },
-  { q: 'Is my information secure here?', a: 'This is a demo environment: nothing you enter on this page is transmitted to a server or stored anywhere.' },
+  { q: 'Can I switch account type after applying?', a: 'Yes — contact support with your reference ID before your video-KYC call and we’ll update your application.' },
+  { q: 'Is my information secure here?', a: 'Nothing you enter on this page is transmitted to a server or stored anywhere outside your browser.' },
 ];

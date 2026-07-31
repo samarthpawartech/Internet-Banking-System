@@ -24,7 +24,7 @@ export const formPagesData = {
       items: [
         { q: 'Is there a fee for paying my EMI online?', a: 'No, online EMI payments through this page carry no additional convenience fee.' },
         { q: 'How long until my payment reflects on my loan account?', a: 'Most payments reflect within a few hours; in rare cases it can take up to one business day.' },
-        { q: 'Can I pay more than my EMI amount?', a: 'Yes, entering a higher amount is treated as a part-prepayment, subject to your loan\u2019s prepayment terms.' },
+        { q: 'Can I pay more than my EMI amount?', a: 'Yes, entering a higher amount is treated as a part-prepayment, subject to your loan’s prepayment terms.' },
       ],
     },
   },
@@ -52,8 +52,8 @@ export const formPagesData = {
     faq: {
       title: 'Card bill payment, answered',
       items: [
-        { q: 'What\u2019s the difference between minimum due and total due?', a: 'Paying only the minimum due avoids a late payment fee but interest still accrues on the remaining balance; paying the total due avoids interest entirely.' },
-        { q: 'Can I pay someone else\u2019s IBS card bill?', a: 'Yes, enter the card details and payer information accurately; the payment will apply to the specified card.' },
+        { q: 'What’s the difference between minimum due and total due?', a: 'Paying only the minimum due avoids a late payment fee but interest still accrues on the remaining balance; paying the total due avoids interest entirely.' },
+        { q: 'Can I pay someone else’s IBS card bill?', a: 'Yes, enter the card details and payer information accurately; the payment will apply to the specified card.' },
         { q: 'Is there a maximum payment amount?', a: 'Payments above a certain threshold may require additional verification for security purposes.' },
       ],
     },
@@ -94,8 +94,8 @@ export const formPagesData = {
     breadcrumb: [{ label: 'File a Complaint', path: '/complaint' }],
     hero: {
       icon: 'ClipboardList', eyebrow: 'Complaints',
-      title: 'Tell us what went wrong — we\u2019ll take it from here',
-      description: 'Every complaint gets a trackable reference ID and a resolution timeline, whether it\u2019s about a charge, an app bug, or a branch experience.',
+      title: 'Tell us what went wrong — we’ll take it from here',
+      description: 'Every complaint gets a trackable reference ID and a resolution timeline, whether it’s about a charge, an app bug, or a branch experience.',
     },
     fields: [
       { name: 'name', label: 'Full Name', type: 'text', placeholder: 'Your name', required: true },
@@ -114,8 +114,8 @@ export const formPagesData = {
     faq: {
       title: 'Complaints, answered',
       items: [
-        { q: 'How long will it take to resolve my complaint?', a: 'Most complaints are resolved within 5 working days; you\u2019ll be notified if a case requires additional time.' },
-        { q: 'What if I\u2019m not satisfied with the resolution?', a: 'Unresolved or unsatisfactory complaints automatically escalate to our nodal grievance redressal officer.' },
+        { q: 'How long will it take to resolve my complaint?', a: 'Most complaints are resolved within 5 working days; you’ll be notified if a case requires additional time.' },
+        { q: 'What if I’m not satisfied with the resolution?', a: 'Unresolved or unsatisfactory complaints automatically escalate to our nodal grievance redressal officer.' },
         { q: 'Can I attach documents to my complaint?', a: 'After submission, our team will email you a secure link to upload any supporting documents or screenshots.' },
       ],
     },
@@ -125,7 +125,7 @@ export const formPagesData = {
     breadcrumb: [{ label: 'Track a Request', path: '/track-request' }],
     hero: {
       icon: 'Search', eyebrow: 'Track Request',
-      title: 'Check the status of anything you\u2019ve submitted',
+      title: 'Check the status of anything you’ve submitted',
       description: 'Complaints, insurance claims, card applications and loan applications — one reference ID, one live status.',
     },
     fields: [
@@ -136,13 +136,13 @@ export const formPagesData = {
     successTitle: 'Request found',
     successDesc: 'Status: In Progress — your request is currently with our resolution team and is on track for the committed timeline.',
     sidebar: {
-      icon: 'Info', title: 'Can\u2019t find your reference ID?',
+      icon: 'Info', title: 'Can’t find your reference ID?',
       points: ['Check the confirmation email sent at submission', 'It also appears in your IBS Connect activity feed', 'Still stuck? Contact support with your registered mobile number'],
     },
     faq: {
       title: 'Tracking, answered',
       items: [
-        { q: 'Where do I find my reference ID?', a: 'It\u2019s included in the confirmation email or SMS sent immediately after you submitted your original request.' },
+        { q: 'Where do I find my reference ID?', a: 'It’s included in the confirmation email or SMS sent immediately after you submitted your original request.' },
         { q: 'What do the different status labels mean?', a: 'Submitted means received but not yet assigned; In Progress means a team is actively working on it; Resolved means the case is closed.' },
         { q: 'Can I track a request I made over the phone?', a: 'Yes, any request logged by phone support is also assigned a reference ID that works here.' },
       ],

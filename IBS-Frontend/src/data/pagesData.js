@@ -4,7 +4,7 @@ export const pagesData = {
     breadcrumb: [{ label: 'Personal Banking', path: '/personal-banking' }],
     hero: {
       icon: 'User', eyebrow: 'Personal Banking',
-      title: 'Every account you need, none of the clutter you don\u2019t',
+      title: 'Every account you need, none of the clutter you don’t',
       description: 'Savings, salary, deposits, cards and loans — designed to work together as one connected account, not nine separate logins.',
       primaryCta: { label: 'Open savings account', path: '/open-account?type=savings' },
       secondaryCta: { label: 'Compare cards', path: '/personal-banking/cards/credit-cards' },
@@ -12,7 +12,7 @@ export const pagesData = {
     overview: {
       title: 'Banking that adapts to your life stage',
       paragraphs: [
-        'Whether you\u2019re opening your first salary account or planning retirement deposits, IBS keeps every product under a single login and a single relationship manager.',
+        'Whether you’re opening your first salary account or planning retirement deposits, IBS keeps every product under a single login and a single relationship manager.',
         'Video-KYC means most products activate the same day — no waiting in a branch queue, no paper forms mailed back and forth.',
       ],
       highlights: [
@@ -115,7 +115,7 @@ export const pagesData = {
         { icon: 'CreditCard', title: 'Corporate Cards', path: '/personal-banking/cards/credit-cards' },
       ],
     },
-    cta: { title: 'Let\u2019s simplify your treasury operations', description: 'Speak with our corporate banking team about your setup.', primaryCta: { label: 'Contact corporate sales', path: '/contact' }, secondaryCta: { label: 'Explore API banking', path: '/digital-banking' } },
+    cta: { title: 'Let’s simplify your treasury operations', description: 'Speak with our corporate banking team about your setup.', primaryCta: { label: 'Contact corporate sales', path: '/contact' }, secondaryCta: { label: 'Explore API banking', path: '/digital-banking' } },
   },
 
   digitalBanking: {
@@ -149,7 +149,7 @@ export const pagesData = {
       ],
     },
     features: {
-      title: 'What\u2019s inside',
+      title: 'What’s inside',
       items: [
         { icon: 'Server', title: 'Internet Banking', desc: 'Full account control from any browser.' },
         { icon: 'QrCode', title: 'UPI & QR Payments', desc: 'Scan, pay, and request money instantly.' },
@@ -173,7 +173,7 @@ export const pagesData = {
         { icon: 'ShieldCheck', title: 'Support Center', path: '/support' },
       ],
     },
-    cta: { title: 'Bring your banking into one app', description: 'IBS Connect puts accounts, cards and Nova in your pocket.', primaryCta: { label: 'See IBS Connect', path: '/ibs-connect' }, secondaryCta: { label: 'Customer login', path: '/customer-login' } },
+    cta: { title: 'Bring your banking into one app', description: 'IBS Connect puts accounts, cards and Nova in your pocket.', primaryCta: { label: 'See IBS Connect', path: '/ibs-connect' }, secondaryCta: { label: 'Consumer Login', path: '/customer-login' } },
   },
 
   businessBanking: {
@@ -232,7 +232,7 @@ export const pagesData = {
         { icon: 'Server', title: 'Digital Banking', path: '/digital-banking' },
       ],
     },
-    cta: { title: 'Let\u2019s get your business banking sorted', description: 'Talk to our business banking team about the right account for you.', primaryCta: { label: 'Contact us', path: '/contact' }, secondaryCta: { label: 'Explore digital tools', path: '/digital-banking' } },
+    cta: { title: 'Let’s get your business banking sorted', description: 'Talk to our business banking team about the right account for you.', primaryCta: { label: 'Contact us', path: '/contact' }, secondaryCta: { label: 'Explore digital tools', path: '/digital-banking' } },
   },
 
   agriBusiness: {
@@ -349,7 +349,7 @@ export const pagesData = {
       icon: 'Smartphone', eyebrow: 'IBS Connect',
       title: 'The whole bank, redesigned for your phone',
       description: 'Accounts, cards, UPI and Nova the AI assistant — biometric login, instant transfers, and card controls in one clean app.',
-      primaryCta: { label: 'Customer login', path: '/customer-login' },
+      primaryCta: { label: 'Consumer Login', path: '/customer-login' },
       secondaryCta: { label: 'See digital banking', path: '/digital-banking' },
     },
     overview: {
@@ -376,7 +376,7 @@ export const pagesData = {
       title: 'Why customers keep it on their home screen',
       items: [
         { icon: 'Bell', title: 'Real-time alerts', desc: 'Every debit, credit and login attempt notified instantly.' },
-        { icon: 'ChartPie', title: 'Auto-categorised spending', desc: 'A monthly summary that\u2019s actually ready when the month ends.' },
+        { icon: 'ChartPie', title: 'Auto-categorised spending', desc: 'A monthly summary that’s actually ready when the month ends.' },
         { icon: 'QrCode', title: 'Scan & pay', desc: 'UPI QR payments and bill pay without leaving the app.' },
         { icon: 'Headphones', title: 'In-app support', desc: 'Chat with Nova or escalate to a human without switching apps.' },
       ],
@@ -394,10 +394,10 @@ export const pagesData = {
       items: [
         { icon: 'Server', title: 'Digital Banking', path: '/digital-banking' },
         { icon: 'ShieldCheck', title: 'Security', path: '/support' },
-        { icon: 'LogIn', title: 'Customer Login', path: '/customer-login' },
+        { icon: 'LogIn', title: 'Consumer Login', path: '/customer-login' },
       ],
     },
-    cta: { title: 'Get IBS Connect', description: 'Search "IBS Connect" on your app store, or continue on the web.', primaryCta: { label: 'Customer login', path: '/customer-login' }, secondaryCta: { label: 'Learn about security', path: '/support' } },
+    cta: { title: 'Get IBS Connect', description: 'Search "IBS Connect" on your app store, or continue on the web.', primaryCta: { label: 'Consumer Login', path: '/customer-login' }, secondaryCta: { label: 'Learn about security', path: '/support' } },
   },
 
   careers: {
@@ -455,7 +455,7 @@ export const pagesData = {
         { icon: 'CircleQuestionMark', title: 'Support', path: '/support' },
       ],
     },
-    cta: { title: 'See where you\u2019d fit', description: 'Browse open roles across engineering, risk and branch banking.', primaryCta: { label: 'Contact recruiting', path: '/contact' }, secondaryCta: { label: 'Our story', path: '/about' } },
+    cta: { title: 'See where you’d fit', description: 'Browse open roles across engineering, risk and branch banking.', primaryCta: { label: 'Contact recruiting', path: '/contact' }, secondaryCta: { label: 'Our story', path: '/about' } },
   },
 
   support: {
@@ -492,8 +492,8 @@ export const pagesData = {
       title: 'Support, answered',
       items: [
         { q: 'How do I track a complaint I already filed?', a: 'Use the reference ID emailed to you at submission on the Track a Request page for live status updates.' },
-        { q: 'What is the resolution time for a complaint?', a: 'Most complaints resolve within 5 working days; complex disputes may take longer and you\u2019ll be notified of the revised timeline.' },
-        { q: 'Can I escalate if I\u2019m not satisfied?', a: 'Yes — unresolved complaints automatically escalate to our nodal grievance officer after the standard resolution window.' },
+        { q: 'What is the resolution time for a complaint?', a: 'Most complaints resolve within 5 working days; complex disputes may take longer and you’ll be notified of the revised timeline.' },
+        { q: 'Can I escalate if I’m not satisfied?', a: 'Yes — unresolved complaints automatically escalate to our nodal grievance officer after the standard resolution window.' },
       ],
     },
     related: {
@@ -634,7 +634,7 @@ export const pagesData = {
       secondaryCta: { label: 'Compare schemes below', path: '#' },
     },
     overview: {
-      title: 'Deposits that don\u2019t lock you out completely',
+      title: 'Deposits that don’t lock you out completely',
       paragraphs: [
         'Unlike traditional FDs, IBS deposits allow partial withdrawal in emergencies without breaking the entire deposit or losing all accrued interest.',
         'Senior citizens automatically receive a 0.5% rate bump across all fixed deposit tenures, applied without any extra paperwork.',
@@ -677,7 +677,7 @@ export const pagesData = {
         { icon: 'HandCoins', title: 'Loan Against Deposit', path: '/personal-banking/loans' },
       ],
     },
-    cta: { title: 'Lock in today\u2019s rate', description: 'Rates are reviewed quarterly — open before the next revision.', primaryCta: { label: 'Open a deposit', path: '/open-account?type=deposit' }, secondaryCta: { label: 'Talk to an advisor', path: '/contact' } },
+    cta: { title: 'Lock in today’s rate', description: 'Rates are reviewed quarterly — open before the next revision.', primaryCta: { label: 'Open a deposit', path: '/open-account?type=deposit' }, secondaryCta: { label: 'Talk to an advisor', path: '/contact' } },
   },
 
   consumerLoans: {
@@ -694,7 +694,7 @@ export const pagesData = {
       title: 'Digital-first, but never a black box',
       paragraphs: [
         'Every loan product shows its indicative rate range, processing fee and eligibility criteria up front — no "contact us for rates" dead ends.',
-        'Prepayment is allowed after 12 EMIs without penalty on floating-rate loans, so you\u2019re never locked into paying more interest than necessary.',
+        'Prepayment is allowed after 12 EMIs without penalty on floating-rate loans, so you’re never locked into paying more interest than necessary.',
       ],
       highlights: [
         { icon: 'Percent', label: 'Home loan starts at', value: '8.35%' },
@@ -745,7 +745,7 @@ export const pagesData = {
     hero: {
       icon: 'CreditCard', eyebrow: 'Credit Cards',
       title: 'Metal cards that reward how you actually spend',
-      description: 'Platinum, Signature and Infinite tiers with real-time spend tracking, lounge access, and rewards that don\u2019t expire in 90 days.',
+      description: 'Platinum, Signature and Infinite tiers with real-time spend tracking, lounge access, and rewards that don’t expire in 90 days.',
       primaryCta: { label: 'Apply now', path: '/open-account?type=creditcard' },
       secondaryCta: { label: 'Pay a card bill', path: '/cards/bill-payment' },
     },
@@ -764,7 +764,7 @@ export const pagesData = {
       title: 'Standard across every tier',
       items: [
         { icon: 'ChartPie', title: 'Real-time spend tracking', desc: 'See a transaction the second it settles, auto-categorised.' },
-        { icon: 'Gift', title: 'Points that don\u2019t expire', desc: 'Rewards stay valid as long as your account is active.' },
+        { icon: 'Gift', title: 'Points that don’t expire', desc: 'Rewards stay valid as long as your account is active.' },
         { icon: 'ShieldCheck', title: 'Zero liability on fraud', desc: 'Report within 3 days for full protection on unauthorised spends.' },
         { icon: 'Smartphone', title: 'Instant card controls', desc: 'Freeze, set limits, or block international usage from the app.' },
       ],
@@ -811,7 +811,7 @@ export const pagesData = {
       title: 'More than a way to withdraw cash',
       paragraphs: [
         'IBS debit cards support contactless payments, international usage (toggle-controlled), and ATM withdrawals across a shared network of 5,400+ machines fee-free.',
-        'Every debit card ships with a virtual counterpart usable the moment your account activates, so you\u2019re never waiting on the post for your first payment.',
+        'Every debit card ships with a virtual counterpart usable the moment your account activates, so you’re never waiting on the post for your first payment.',
       ],
       highlights: [
         { icon: 'Building2', label: 'Fee-free ATMs', value: '5,400+' },
@@ -823,7 +823,7 @@ export const pagesData = {
       items: [
         { icon: 'Wifi', title: 'Contactless tap-to-pay', desc: 'Tap for purchases under the contactless limit, no PIN needed.' },
         { icon: 'ShieldCheck', title: 'Zero liability protection', desc: 'Full protection on unauthorised transactions reported within 3 days.' },
-        { icon: 'Globe', title: 'International usage toggle', desc: 'Switch on international transactions only when you\u2019re travelling.' },
+        { icon: 'Globe', title: 'International usage toggle', desc: 'Switch on international transactions only when you’re travelling.' },
         { icon: 'Smartphone', title: 'Instant issuance', desc: 'A usable virtual card the moment your account is active.' },
       ],
     },
@@ -838,7 +838,7 @@ export const pagesData = {
     faq: {
       title: 'Debit cards, answered',
       items: [
-        { q: 'How do I enable international transactions?', a: 'Toggle international usage on from the Security Center in IBS Connect before you travel, and switch it off when you\u2019re done.' },
+        { q: 'How do I enable international transactions?', a: 'Toggle international usage on from the Security Center in IBS Connect before you travel, and switch it off when you’re done.' },
         { q: 'What are the daily withdrawal limits?', a: 'Limits vary by card tier and can be adjusted within the maximum allowed range directly from the app.' },
         { q: 'Is card replacement free?', a: 'The first replacement each year is free; subsequent replacements carry a nominal fee shown before you confirm the request.' },
       ],
@@ -897,7 +897,7 @@ export const pagesData = {
       items: [
         { q: 'Do I need an IBS bank account to get a prepaid card?', a: 'No, gift and forex prepaid cards can be issued to anyone with basic KYC, independent of holding a savings account.' },
         { q: 'Can I reload a forex card during my trip?', a: 'Yes, reloads can be done through IBS Connect if you have app access, or via net banking before departure.' },
-        { q: 'What happens to unused balance on a gift card?', a: 'Unused balance remains valid until the card\u2019s expiry date and can be used across any accepting merchant.' },
+        { q: 'What happens to unused balance on a gift card?', a: 'Unused balance remains valid until the card’s expiry date and can be used across any accepting merchant.' },
       ],
     },
     related: {
@@ -993,7 +993,7 @@ export const pagesData = {
       title: 'How the programme works',
       items: [
         { icon: 'Sparkles', title: 'Pooled across products', desc: 'Card spends, UPI transactions and bill pay all earn into one balance.' },
-        { icon: 'Clock', title: 'Points don\u2019t expire', desc: 'As long as your account stays active, your points stay valid.' },
+        { icon: 'Clock', title: 'Points don’t expire', desc: 'As long as your account stays active, your points stay valid.' },
         { icon: 'Plane', title: 'Airline mile transfer', desc: 'Convert points directly into miles with major airline partners.' },
         { icon: 'Store', title: '300+ brand catalogue', desc: 'Redeem for vouchers across fashion, electronics, travel and dining.' },
       ],
