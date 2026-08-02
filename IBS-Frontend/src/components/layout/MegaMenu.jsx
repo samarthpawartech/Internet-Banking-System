@@ -19,7 +19,7 @@ export default function MegaMenu({ menu, onNavigate }) {
             {col.items.map((item) => (
               <Link key={item.label} to={item.path} className={styles.item} onClick={onNavigate}>
                 <span className={styles.itemIcon}><DynamicIcon name={item.icon} size={18} /></span>
-                <span>
+                <span className={styles.itemText}>
                   <span className={styles.itemLabel}>{item.label}</span>
                   <span className={styles.itemDesc}>{item.desc}</span>
                 </span>

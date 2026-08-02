@@ -8,7 +8,7 @@ export const megaMenuData = [
         items: [
           { label: 'Savings Account', path: '/personal-banking/savings-account', icon: 'PiggyBank', desc: 'Zero-balance options with up to 4.5% p.a.' },
           { label: 'Salary Account', path: '/personal-banking/salary-account', icon: 'Wallet', desc: 'Zero-fee salary banking with lifestyle perks' },
-          { label: 'Fixed & Recurring Deposits', path: '/personal-banking/deposits', icon: 'Landmark', desc: 'Lock in up to 7.75% p.a. returns' },
+          { label: 'Deposits', path: '/personal-banking/deposits', icon: 'Landmark', desc: 'Lock in up to 7.75% p.a. returns' },
         ],
       },
       {
@@ -82,7 +82,7 @@ export const megaMenuData = [
       {
         heading: 'Intelligence & security',
         items: [
-          { label: 'AI Virtual Assistant', path: '/digital-banking', icon: 'Bot', desc: 'Ask Nova anything about your money' },
+          { label: 'AI Assistant', path: '/digital-banking', icon: 'Bot', desc: 'Ask Nova anything about your money' },
           { label: 'Smart Dashboard', path: '/digital-banking', icon: 'ChartPie', desc: 'Spending insights, auto-tagged' },
           { label: 'Security Center', path: '/digital-banking', icon: 'ShieldCheck', desc: 'Device management & fraud alerts' },
         ],
@@ -105,16 +105,16 @@ export const megaMenuData = [
         heading: 'Business essentials',
         items: [
           { label: 'Current Accounts', path: '/business-banking', icon: 'Building2', desc: 'Zero-hassle accounts for every scale' },
-          { label: 'MSME & Startup Banking', path: '/business-banking', icon: 'Rocket', desc: 'Collateral-free loans up to ₹2 Cr' },
-          { label: 'Merchant Services & POS', path: '/business-banking', icon: 'Store', desc: 'Accept payments in-store & online' },
+          { label: 'MSME & Startups', path: '/business-banking', icon: 'Rocket', desc: 'Collateral-free loans up to ₹2 Cr' },
+          { label: 'Merchant & POS', path: '/business-banking', icon: 'Store', desc: 'Accept payments in-store & online' },
         ],
       },
       {
         heading: 'Specialised',
         items: [
-          { label: 'GST & Payroll Banking', path: '/business-banking', icon: 'ClipboardList', desc: 'Compliance-ready business tools' },
+          { label: 'GST & Payroll', path: '/business-banking', icon: 'ClipboardList', desc: 'Compliance-ready business tools' },
           { label: 'Agri & Food Business', path: '/business-banking/agri-and-food-business', icon: 'Wheat', desc: 'Farm to warehouse financing' },
-          { label: 'Trade & Working Capital', path: '/business-banking', icon: 'Truck', desc: 'Fund your operating cycle' },
+          { label: 'Working Capital', path: '/business-banking', icon: 'Truck', desc: 'Fund your operating cycle' },
         ],
       },
     ],
